@@ -1,0 +1,42 @@
+.about-me {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    
+    &__portrait {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 20px;
+
+        @include small {
+        }
+    
+        @include medium {
+            width: 50%;
+            float: left; //FLEX MACHEN
+            text-align: left;
+        }
+    
+        @include large {
+        }
+    
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        text-align: center;
+
+        @include small {
+        }
+    
+        @include medium {
+            text-align: left;
+            margin-top: 5px;
+        }
+    }
+
+    &__description {
+
+    }
+}

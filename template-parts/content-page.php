@@ -9,44 +9,38 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<div class="about-me">
+	<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/Low_Res_-4318-e1568114975760.jpg" class="about-me__portrait">
+	<h2 class="about-me__heading">Über mich</h2>
+	<div class="about-me__description">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+</div>
 
-	<?php japanblog_post_thumbnail(); ?>
+<div class="about-website">
+	<h2 class="about-website__heading">Was dich hier erwartet</h2>
+	<div class="about-website__description">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+		eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+		laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+		dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+		fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+		proident, sunt in culpa qui officia deserunt mollit anim id est 
+		laborum.
+	</div>
 
-	<div class="entry-content">
-		<?php
-		the_content();
+</div>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'japanblog' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'japanblog' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+<div class="mainpicture-gallery"> <!-- WARUM INNERHALB DES ANDEREN TAGS !-->
+	<h2 class="mainpicture-gallery__heading"><span class="mainpicture-gallery__heading-inner">Hier ein kleiner Ausblick</span></h2>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+	ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+	ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+	reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+	sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
+	est laborum.
+</div>

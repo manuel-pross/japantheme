@@ -1,0 +1,87 @@
+/*list {
+    background-color: #fff;
+
+    &__item {
+        margin-right: 1rem;
+
+        &--light {
+            
+        }
+    }
+
+    &__link {
+        color: #fff;
+    }
+}
+
+.btn {
+    display: block;
+    background-color: blue;
+
+    &--light {
+        color: #fff;
+    }
+
+    &--dark {
+        color: black;
+    }
+}*/
+
+.main-navigation{
+
+    ul {
+        display: flex;
+        padding-left: 0;
+        flex-direction: column;
+        background-color: $lightestSakura;
+
+        @include small{
+
+        }
+
+        @include medium{
+            flex-direction: row;
+            margin: 0;
+    
+            list-style: none;
+            padding-left: 80px;
+            flex-direction: row;
+        }
+
+        @include large{
+
+        }
+          
+    }
+
+    li {
+
+        @include small{
+
+        }
+
+        @include medium{
+            margin-right: 40px;
+        }
+
+        @include large{
+
+        }
+    }
+
+    a { //WIE DAS GANZE LI ALS A WENN ICH DISPLAY FLEX VERWENDE
+        display: block;
+        border-bottom: solid 3px transparent;
+        padding: 25px 10px 25px 10px;
+        font-weight: bold;
+        text-decoration: none;
+        color: $white;
+        transition: background-color 0.75s, border-bottom 0.75s; //Warum keine zwei Transitions
+        border-top: solid 3px transparent;
+
+        &:hover {
+            border-bottom: solid 3px $white;
+            background-color: $lighterSakura;
+        }
+    }
+}

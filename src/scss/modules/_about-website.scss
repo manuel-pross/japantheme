@@ -1,0 +1,39 @@
+.about-website {
+    clear: both;
+    background-color: $darkerSakura;
+    color: $white;
+    text-align: center;
+
+
+    &__heading {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 5px 5px;
+
+        @include small {
+        }
+    
+        @include medium{
+            text-align: left;
+        }
+    
+        @include large{
+    
+        }
+    }
+
+    &__description {
+        padding: 0px 5px 5px 5px;
+
+        @include small {
+        }
+    
+        @include medium{
+            text-align: left;
+        }
+    
+        @include large{
+    
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.image-header { //EVENTUELL ALS BACKGROUND-IMAGE
+    overflow: hidden;
+    position: relative;
+    height: auto;
+
+    @include small {
+    }
+
+    @include medium{
+    }
+
+    @include large{
+    }
+
+    &__navpicture{
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+    }
+
+    &__entry-title {
+
+        font-size: 1.5rem;
+        bottom: 65%;
+        position: absolute;
+        color: $white;
+        text-transform: uppercase;
+        left: 10%;
+
+        @include small {
+        }
+
+        @include medium{
+            font-size: 2.5rem;
+            bottom: 52%;
+        }
+
+        @include large{
+            font-size: 3rem;
+        }
+    }
+
+    &__description {
+
+        font-size: 0.75rem;
+        bottom: 61%;
+        position: absolute;
+        color: $white;
+        font-weight: bolder;
+        left: 10%;
+
+        @include small {
+        }
+
+        @include medium{
+            font-size: 1.25rem;
+            bottom: 48%;
+
+        }
+
+        @include large{
+            font-size: 1.75rem;
+        }
+    }
+}
