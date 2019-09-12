@@ -38,7 +38,7 @@ gulp.task('sass', function () {
         }).on('error', sass.logError))
         .pipe(plumber.stop())
         .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest(''))
+        .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
 });
 
@@ -55,7 +55,7 @@ gulp.task('css', function () {
         .src('style.css')
         .pipe(postcss(processors))
         .pipe(rename('style.min.css'))
-        .pipe(gulp.dest(''));
+        .pipe(gulp.dest('./'));
 });
 
 // Concatenate & Minify JS
@@ -101,21 +101,21 @@ gulp.task('watch', function () {
     browserSync.init({
         proxy: 'http://localhost/japanBlog/'
     });
-    gulp.watch('src/scss/**/*.scss', ['sass']);
+    gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
     gulp.watch('**/*.php').on('change', browserSync.reload);
     gulp
         .watch(
         'src/js/**/*.js',
-        [
+        gulp.series(
             'scripts',
             'scripts-vendor'
-        ]
+        )
         )
         .on('change', browserSync.reload);
 });
 
 // Default Tasks
-gulp.task('default', ['sass', 'scripts', 'scripts-vendor', 'watch']);
+gulp.task('default', gulp.series('sass', 'scripts', 'scripts-vendor', 'watch'));
 
 // Build
-gulp.task('build', ['sass', 'css', 'scripts', 'scripts-vendor']);
+gulp.task('build', gulp.series('sass', 'css', 'scripts', 'scripts-vendor'));

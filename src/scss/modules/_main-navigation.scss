@@ -34,6 +34,8 @@
         padding-left: 0;
         flex-direction: column;
         background-color: $lightestSakura;
+        margin-top: 0;
+        margin-bottom: 0;
 
         @include small{
 
@@ -55,7 +57,6 @@
     }
 
     li {
-
         @include small{
 
         }
@@ -69,7 +70,8 @@
         }
     }
 
-    a { //WIE DAS GANZE LI ALS A WENN ICH DISPLAY FLEX VERWENDE
+    a { 
+        text-align: center;
         display: block;
         border-bottom: solid 3px transparent;
         padding: 25px 10px 25px 10px;

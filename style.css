@@ -467,6 +467,8 @@ html {
   padding-left: 0;
   flex-direction: column;
   background-color: #EA8D9D;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 961px) {
@@ -486,6 +488,7 @@ html {
 }
 
 .main-navigation a {
+  text-align: center;
   display: block;
   border-bottom: solid 3px transparent;
   padding: 25px 10px 25px 10px;
@@ -620,8 +623,53 @@ html {
 }
 
 .mainpicture-gallery {
-  color: black;
+  width: 540px;
+  margin: 40px auto;
+  overflow: auto;
+}
+
+.mainpicture-gallery__heading {
   text-align: center;
+}
+
+.mainpicture-gallery__slider-prev {
+  float: left;
+  margin-top: 130px;
+  cursor: pointer;
+  position: relative;
+  margin-right: -45px;
+  z-index: 100;
+}
+
+.mainpicture-gallery__slider-inner {
+  width: 504px;
+  height: 378px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  padding: 3px;
+  border: #666 solid 1px;
+}
+
+.mainpicture-gallery .is-active {
+  display: inline-block;
+  width: 504px;
+  height: 378px;
+}
+
+.mainpicture-gallery .is-passive {
+  display: none;
+  width: 504px;
+  height: 378px;
+}
+
+.mainpicture-gallery__slider-next {
+  float: left;
+  margin-top: 130px;
+  cursor: pointer;
+  position: relative;
+  margin-left: -45px;
+  z-index: 100;
 }
 
 .myfooter {

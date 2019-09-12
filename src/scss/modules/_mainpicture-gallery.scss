@@ -1,8 +1,60 @@
 .mainpicture-gallery {
-    //background-color: lighten($lighterSakura, 20%); //EARUM IN EINEM DIV VERSCHACHTELT
-    color: black;
-    text-align: center;
+    width: 540px;
+    margin: 40px auto;
+    overflow: auto;
 
     &__heading {
+        text-align: center
+    }
+
+    &__heading-inner {
+        
+    }
+
+    &__slider {
+
+    }
+
+    &__slider-prev {
+        float: left;
+        margin-top: 130px;
+        cursor: pointer;
+
+        position: relative;
+        margin-right: -45px;
+        z-index: 100;
+    }
+
+    &__slider-inner {
+        width: 504px;
+        height: 378px;
+        position: relative;
+        overflow: hidden;
+        float: left;
+        padding: 3px;
+        border: #666 solid 1px;
+    }
+
+    .is-active {
+        display: inline-block;
+        width: 504px;
+        height: 378px;
+    }
+
+    .is-passive {
+        display: none;
+        width: 504px;
+        height: 378px;
+    }
+
+    &__slider-next {
+        float: left;
+        margin-top: 130px;
+        cursor: pointer;
+
+        position: relative;
+        margin-left: -45px;
+        z-index: 100;
     }
 }
+

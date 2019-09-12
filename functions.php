@@ -111,7 +111,7 @@ add_action( 'after_setup_theme', 'japanblog_content_width', 0 );
 function japanblog_scripts() {
 	wp_enqueue_style( 'japanblog-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'japanblog-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '01', true );
+	wp_enqueue_script( 'japanblog-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '02', true );
 
 	//wp_enqueue_script( 'japanblog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

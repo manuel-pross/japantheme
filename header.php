@@ -34,7 +34,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 		<div class="image-header">
-			<img class="image-header__navpicture" src="http://localhost/japanBlog/wp-content/uploads/2019/09/20190806_045102.jpg">
+			<img class="image-header__navpicture" src="http://localhost/japanBlog/wp-content/uploads/2019/09/20190806_045102-1.jpg">
 			<h1 class="image-header__entry-title">Japan</h1>
 			<p class="image-header__description">Discover a new World</p>
 		</div>
