@@ -4,12 +4,11 @@ const mainNavigation = (function($) {
         VARS
     ******************************************************************/
     // your code here
-    
-    
     /******************************************************************
         EVENTS
     ******************************************************************/
     appendIconToNav();
+    //appendSmallIconsToListitems();
 
     /******************************************************************
         FUNCTIONS
@@ -18,9 +17,13 @@ const mainNavigation = (function($) {
     function appendIconToNav() {
         $('#primary-menu').prepend('<li class="icon"></li>');
         const $icon = $('.icon');
-        $icon.append('<a class="home-link" href="//localhost:3000/japanBlog/"><img src="http://localhost/japanBlog/wp-content/uploads/2019/09/cherry-blossom-1-2.png" class="blossom-icon"></a>');
+        $icon.append('<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/cherry-blossom-1-2.png" class="blossom-icon">');
         $icon.css({"text-align" : "center"});
-        $('.home-link').css({"padding" : "0px 0px 2px 0px"})
+        $('.blossom-icon').css({'padding-top' : '5px'});
+    }
+
+    function appendSmallIconsToListitems () {
+        $('a').append('<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/cherry-blossom.png">');
     }
 
     //$('.blossom-icon').css({"margin-top" : "5px"});
@@ -33,5 +36,5 @@ const mainNavigation = (function($) {
     return {
         // your code here
     };
-    
+
 })(jQuery);

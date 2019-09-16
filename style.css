@@ -441,7 +441,7 @@ html {
         margin-right: 1rem;
 
         &--light {
-            
+
         }
     }
 
@@ -462,6 +462,23 @@ html {
         color: black;
     }
 }*/
+.main-navigation__container {
+  height: 75px;
+  width: 100%;
+  background-color: #EA8D9D;
+  text-align: center;
+}
+
+@media only screen and (min-width: 961px) {
+  .main-navigation__container {
+    display: none;
+  }
+}
+
+.main-navigation__icon {
+  padding: 3px 0px 0px 3px;
+}
+
 .main-navigation ul {
   display: flex;
   padding-left: 0;
@@ -476,7 +493,7 @@ html {
     flex-direction: row;
     margin: 0;
     list-style: none;
-    padding-left: 80px;
+    padding-left: 40px;
     flex-direction: row;
   }
 }
@@ -596,25 +613,9 @@ html {
   text-align: center;
 }
 
-.about-me__imagecontainer-portraitsmall {
-  border-radius: 100%;
-}
-
-@media only screen and (min-width: 481px) {
-  .about-me__imagecontainer-portraitsmall {
-    display: inline-block;
-  }
-}
-
-@media only screen and (min-width: 961px) {
-  .about-me__imagecontainer-portraitsmall {
-    display: none;
-  }
-}
-
 .about-me__imagecontainer-portraitmedium {
   border-radius: 100%;
-  display: none;
+  width: 100%;
 }
 
 @media only screen and (min-width: 961px) {
@@ -689,7 +690,7 @@ html {
 }
 
 .mainpicture-gallery {
-  width: 100%;
+  width: 75%;
   margin: 40px auto;
   overflow: auto;
 }
@@ -698,10 +699,16 @@ html {
   text-align: center;
 }
 
+.mainpicture-gallery__slider {
+  display: flex;
+}
+
 .mainpicture-gallery__slider-prev {
   float: left;
-  margin-top: 50px;
+  margin-top: 110px;
   cursor: pointer;
+  height: 100%;
+  width: auto;
   position: relative;
   margin-right: -45px;
   z-index: 100;
@@ -709,7 +716,7 @@ html {
 
 @media only screen and (min-width: 961px) {
   .mainpicture-gallery__slider-prev {
-    margin-top: 130px;
+    margin-top: 300px;
   }
 }
 
@@ -718,9 +725,13 @@ html {
   height: auto;
   position: relative;
   overflow: hidden;
-  float: left;
   padding: 3px;
   border: #666 solid 1px;
+}
+
+.mainpicture-gallery__figcaption {
+  margin: 0px 0px 15px 0px;
+  background-color: blue;
 }
 
 .mainpicture-gallery .is-active {
@@ -736,9 +747,10 @@ html {
 }
 
 .mainpicture-gallery__slider-next {
-  float: left;
-  margin-top: 50px;
+  margin-top: 110px;
   cursor: pointer;
+  height: 100%;
+  width: auto;
   position: relative;
   margin-left: -45px;
   z-index: 100;
@@ -746,7 +758,7 @@ html {
 
 @media only screen and (min-width: 961px) {
   .mainpicture-gallery__slider-next {
-    margin-top: 130px;
+    margin-top: 300px;
   }
 }
 
@@ -812,6 +824,7 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 2px;
+  width: 100%;
 }
 
 .footer__phone-svg {

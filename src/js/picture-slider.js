@@ -6,7 +6,7 @@ const pictureSlider = (function($) {
     // your code here
     let $firstChild = $('.mainpicture-gallery__slider-inner img:first-child');
     let $lastChild = $('.mainpicture-gallery__slider-inner img:last-child');
-    
+
     /******************************************************************
         EVENTS
     ******************************************************************/
@@ -46,5 +46,5 @@ const pictureSlider = (function($) {
     return {
         // your code here
     };
-    
+
 })(jQuery);

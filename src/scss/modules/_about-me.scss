@@ -20,34 +20,18 @@
         text-align: center;
     }
 
-    &__imagecontainer-portraitsmall {
-        border-radius: 100%;
-        
-
-            @include small {
-                display: inline-block;
-            }
-        
-            @include medium {
-                display: none;
-            }
-        
-            @include large {
-            }
-    }
-    
     &__imagecontainer-portraitmedium {
         border-radius: 100%;
-        display: none;
+        width: 100%;
 
             @include small {
 
             }
-        
+
             @include medium {
                 display: inline-block;
             }
-        
+
             @include large {
                 display: none;
             }
@@ -62,11 +46,11 @@
             @include small {
 
             }
-        
+
             @include medium {
-                
+
             }
-        
+
             @include large {
                 display: inline-block;
             }
@@ -84,7 +68,7 @@
             @include small {
 
             }
-        
+
             @include medium {
                 text-align: left;
                 margin-top: 5px;

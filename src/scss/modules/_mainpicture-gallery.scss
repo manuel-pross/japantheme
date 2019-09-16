@@ -1,20 +1,22 @@
 .mainpicture-gallery {
-    width: 100%;
+    width: 75%;
     margin: 40px auto;
     overflow: auto;
 
     &__heading {
-        text-align: center
+        text-align: center;
     }
 
     &__slider {
-
+        display: flex;
     }
 
     &__slider-prev {
         float: left;
-        margin-top: 50px;
+        margin-top: 110px;
         cursor: pointer;
+        height: 100%;
+        width: auto;
 
         position: relative;
         margin-right: -45px;
@@ -25,7 +27,7 @@
         }
 
         @include medium {
-            margin-top: 130px;
+            margin-top: 300px;
         }
 
         @include large {
@@ -38,9 +40,13 @@
         height: auto;
         position: relative;
         overflow: hidden;
-        float: left;
         padding: 3px;
         border: #666 solid 1px;
+    }
+
+    &__figcaption {
+        margin: 0px 0px 15px 0px;
+        background-color: blue;
     }
 
     .is-active {
@@ -55,10 +61,15 @@
         height: auto;
     }
 
+    &__description {
+
+    }
+
     &__slider-next {
-        float: left;
-        margin-top: 50px;
+        margin-top: 110px;
         cursor: pointer;
+        height: 100%;
+        width: auto;
 
         position: relative;
         margin-left: -45px;
@@ -69,7 +80,7 @@
         }
 
         @include medium {
-            margin-top: 130px;
+            margin-top: 300px;
         }
 
         @include large {
