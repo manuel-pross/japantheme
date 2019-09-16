@@ -41,7 +41,7 @@
 
         }
 
-        @include medium{
+        @include medium {
             flex-direction: row;
             margin: 0;
     
@@ -50,22 +50,22 @@
             flex-direction: row;
         }
 
-        @include large{
+        @include large {
 
         }
           
     }
 
     li {
-        @include small{
+        @include small {
 
         }
 
-        @include medium{
+        @include medium {
             margin-right: 40px;
         }
 
-        @include large{
+        @include large {
 
         }
     }

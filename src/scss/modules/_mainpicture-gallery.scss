@@ -1,14 +1,10 @@
 .mainpicture-gallery {
-    width: 540px;
+    width: 100%;
     margin: 40px auto;
     overflow: auto;
 
     &__heading {
         text-align: center
-    }
-
-    &__heading-inner {
-        
     }
 
     &__slider {
@@ -17,17 +13,29 @@
 
     &__slider-prev {
         float: left;
-        margin-top: 130px;
+        margin-top: 50px;
         cursor: pointer;
 
         position: relative;
         margin-right: -45px;
         z-index: 100;
+
+        @include small {
+
+        }
+
+        @include medium {
+            margin-top: 130px;
+        }
+
+        @include large {
+
+        }
     }
 
     &__slider-inner {
-        width: 504px;
-        height: 378px;
+        width: 100%;
+        height: auto;
         position: relative;
         overflow: hidden;
         float: left;
@@ -37,24 +45,35 @@
 
     .is-active {
         display: inline-block;
-        width: 504px;
-        height: 378px;
+        width: 100%;
+        height: auto;
     }
 
     .is-passive {
         display: none;
-        width: 504px;
-        height: 378px;
+        width: 100%;
+        height: auto;
     }
 
     &__slider-next {
         float: left;
-        margin-top: 130px;
+        margin-top: 50px;
         cursor: pointer;
 
         position: relative;
         margin-left: -45px;
         z-index: 100;
+
+        @include small {
+
+        }
+
+        @include medium {
+            margin-top: 130px;
+        }
+
+        @include large {
+
+        }
     }
 }
-

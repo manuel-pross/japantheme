@@ -12,29 +12,33 @@ const pictureSlider = (function($) {
     ******************************************************************/
    // your code here
 
+   $('.mainpicture-gallery__slider-next').on('click', moveToNextPicture);
+   $('.mainpicture-gallery__slider-prev').on('click', moveToPreviousPicture);
+
     /******************************************************************
         FUNCTIONS
     ******************************************************************/
     // your code here
 
-    $('.mainpicture-gallery__slider-next').on('click', function() {
+    function moveToNextPicture() {
         if($('.is-active').next().length != 0) {
+            console.log('move to next nextPicture');
             $('.is-active').removeClass('is-active').addClass('is-passive').next().removeClass('is-passive').addClass('is-active');
         }else {
             $firstChild.removeClass('is-passive').addClass('is-active');
             $lastChild.removeClass('is-active').addClass('is-passive');
         }
-    });
+    }
 
-    $('.mainpicture-gallery__slider-prev').on('click', function() {
+    function moveToPreviousPicture() {
         if($('.is-active').prev().length != 0) {
+            console.log('move to next previousPicture');
             $('.is-active').removeClass('is-active').addClass('is-passive').prev().removeClass('is-passive').addClass('is-active');
         }else {
             $lastChild.removeClass('is-passive').addClass('is-active');
             $firstChild.removeClass('is-active').addClass('is-passive');
         }
-    });
-
+    }
 
     /******************************************************************
         PUBLIC_FUNCTIONS

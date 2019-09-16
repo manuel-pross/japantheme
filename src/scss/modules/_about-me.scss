@@ -1,42 +1,97 @@
 .about-me {
+    display: flex;
+    flex-direction: column;
     margin-left: 5px;
     margin-right: 5px;
-    text-align: center;
-    
-    &__portrait {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-        margin-bottom: 20px;
 
         @include small {
+
         }
-    
+
         @include medium {
-            width: 50%;
-            float: left; //FLEX MACHEN
-            text-align: left;
+            flex-direction: row;
         }
-    
+
         @include large {
         }
-    
+
+    &__imagecontainer {
+        width: 100%;
+        text-align: center;
     }
 
-    &__heading {
+    &__imagecontainer-portraitsmall {
+        border-radius: 100%;
+        
+
+            @include small {
+                display: inline-block;
+            }
+        
+            @include medium {
+                display: none;
+            }
+        
+            @include large {
+            }
+    }
+    
+    &__imagecontainer-portraitmedium {
+        border-radius: 100%;
+        display: none;
+
+            @include small {
+
+            }
+        
+            @include medium {
+                display: inline-block;
+            }
+        
+            @include large {
+                display: none;
+            }
+    }
+
+    &__imagecontainer-portraitlarge {
+        border-radius: 100%;
+        width: 75%;
+        height: auto;
+        display: none;
+
+            @include small {
+
+            }
+        
+            @include medium {
+                
+            }
+        
+            @include large {
+                display: inline-block;
+            }
+    }
+
+    &__textcontainer {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__textcontainer-heading {
         text-transform: uppercase;
         text-align: center;
 
-        @include small {
-        }
-    
-        @include medium {
-            text-align: left;
-            margin-top: 5px;
-        }
+            @include small {
+
+            }
+        
+            @include medium {
+                text-align: left;
+                margin-top: 5px;
+            }
     }
 
-    &__description {
+    &__textcontainer-description {
 
     }
 }
