@@ -1,8 +1,8 @@
 .about-me {
     display: flex;
     flex-direction: column;
-    margin-left: 5px;
-    margin-right: 5px;
+
+    margin: 200px 5px 5px 0px;
 
         @include small {
 
@@ -16,20 +16,45 @@
         }
 
     &__imagecontainer {
-        width: 100%;
+        flex: 0 0 200px;
+        margin: 0 auto; //nur bei display: block
+        width: 200px;
+        height: 200px;
         text-align: center;
+        position: relative;
+        border-radius: 100%;
+        overflow: hidden;
+
+        @include small {
+
+        }
+
+        @include medium {
+            flex: 0 0 400px;
+            height: 400px;
+        }
+
+        @include large {
+            flex: 0 0 500px;
+            height: 500px;
+        }
     }
 
-    &__imagecontainer-portraitmedium {
-        border-radius: 100%;
-        width: 100%;
+    &__portraitmedium {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        height: 100%;
+        width: auto;
+
+        transform: translate(-50%, -50%);
 
             @include small {
 
             }
 
             @include medium {
-                display: inline-block;
             }
 
             @include large {
@@ -37,10 +62,9 @@
             }
     }
 
-    &__imagecontainer-portraitlarge {
-        border-radius: 100%;
-        width: 75%;
-        height: auto;
+    &__portraitlarge {
+        position: absolute;
+
         display: none;
 
             @include small {
@@ -53,6 +77,14 @@
 
             @include large {
                 display: inline-block;
+
+                top: 50%;
+                left: 50%;
+
+                height: 100%;
+                width: auto;
+
+                transform: translate(-50%, -50%);
             }
     }
 

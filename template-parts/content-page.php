@@ -8,11 +8,10 @@
  */
 
 ?>
-
 <div class="about-me">
 	<div class="about-me__imagecontainer">
-		<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_middle.jpg" class="about-me__imagecontainer-portraitmedium">
-		<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_big.jpg" class="about-me__imagecontainer-portraitlarge">
+		<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_middle.jpg" class="about-me__portraitmedium">
+		<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_big.jpg" class="about-me__portraitlarge">
 	</div>
 	<div class="about-me__textcontainer">
 		<h2 class="about-me__textcontainer-heading">Über mich</h2>

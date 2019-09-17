@@ -1,41 +1,13 @@
-/*list {
-    background-color: #fff;
-
-    &__item {
-        margin-right: 1rem;
-
-        &--light {
-
-        }
-    }
-
-    &__link {
-        color: #fff;
-    }
-}
-
-.btn {
-    display: block;
-    background-color: blue;
-
-    &--light {
-        color: #fff;
-    }
-
-    &--dark {
-        color: black;
-    }
-}*/
-
 .main-navigation{
 
     &__container {
         height: 75px;
         width: 100%;
+
         background-color: $lightestSakura;
         text-align: center;
 
-        @include small{
+        @include small {
 
         }
 
@@ -46,10 +18,6 @@
         @include large {
 
         }
-    }
-
-    &__icon {
-        padding: 3px 0px 0px 3px;
     }
 
     ul {
@@ -70,7 +38,6 @@
 
             list-style: none;
             padding-left: 40px;
-            flex-direction: row;
         }
 
         @include large {
@@ -80,15 +47,28 @@
     }
 
     li {
+
         @include small {
 
         }
 
         @include medium {
+            display: flex;
+            align-items: stretch;
             margin-right: 40px;
         }
 
         @include large {
+
+        }
+
+        &:first-child {
+            align-items: center;
+
+            @include medium {
+
+                align-items: center;
+            }
 
         }
     }

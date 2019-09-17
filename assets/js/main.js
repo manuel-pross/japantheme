@@ -47,7 +47,7 @@ var mainNavigation = function ($) {
       "text-align": "center"
     });
     $('.blossom-icon').css({
-      'padding-top': '5px'
+      'padding': '10px 0px 0px 5px'
     });
   }
 
