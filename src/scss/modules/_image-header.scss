@@ -20,8 +20,11 @@
 
     &__navpicture-description-container {
         position: absolute;
-        top: 65%;
+        top: 20%;
         left: 50%;
+
+        text-align: center;
+        padding: 10px 5px 10px 5px;
 
         transform: translate(-50%);
 
@@ -52,11 +55,10 @@
     }
 
     &__entry-title {
-
+        margin: 0px 0px 0px 0px;
         font-size: 1.5rem;
         color: $white;
         text-transform: uppercase;
-        margin: 5px;
 
         @include small {
 
@@ -72,11 +74,9 @@
     }
 
     &__description {
-
         font-size: 0.75rem;
         color: $white;
         font-weight: bolder;
-        margin: 5px;
 
         @include small {
 

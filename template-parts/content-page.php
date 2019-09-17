@@ -10,8 +10,8 @@
 ?>
 <div class="about-me">
 	<div class="about-me__imagecontainer">
-		<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_middle.jpg" class="about-me__portraitmedium">
-		<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_big.jpg" class="about-me__portraitlarge">
+		<img src="http://japanblog.local/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_middle.jpg" class="about-me__portraitmedium">
+		<img src="http://japanblog.local/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_big.jpg" class="about-me__portraitlarge">
 	</div>
 	<div class="about-me__textcontainer">
 		<h2 class="about-me__textcontainer-heading">Über mich</h2>
@@ -41,12 +41,12 @@
 <div class="mainpicture-gallery">
 	<h2 class="mainpicture-gallery__heading">Hier ein kleiner Ausblick</h2>
 	<div class="mainpicture-gallery__slider">
-		<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/arrow-left.png" alt="arrow for previous picture" class="mainpicture-gallery__slider-prev">
+		<img src="http://japanblog.local/wp-content/uploads/2019/09/arrow-left.png" alt="arrow for previous picture" class="mainpicture-gallery__slider-prev">
 		<div class="mainpicture-gallery__slider-inner">
-			<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/20190810_142320.jpg" alt="active picture" class="is-active">
-			<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/20190809_191216.jpg" alt="passive picture 1" class="is-passive">
-			<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/20190809_174328.jpg" alt="passive picture 2" class="is-passive">
+			<img src="http://japanblog.local/wp-content/uploads/2019/09/20190811_144152.jpg" alt="active picture" class="is-active">
+			<img src="http://japanblog.local/wp-content/uploads/2019/09/20190810_142320.jpg" alt="passive picture 1" class="is-passive">
+			<img src="http://japanblog.local/wp-content/uploads/2019/09/20190807_120158.jpg" alt="passive picture 2" class="is-passive">
 		</div>
-		<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/arrow-right.png" alt="arrow for next picture" class="mainpicture-gallery__slider-next">
+		<img src="http://japanblog.local/wp-content/uploads/2019/09/arrow-right.png" alt="arrow for next picture" class="mainpicture-gallery__slider-next">
 	</div>
 </div>

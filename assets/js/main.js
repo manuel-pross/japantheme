@@ -23,6 +23,64 @@ var aboutme = function ($) {
 }(jQuery);
 "use strict";
 
+var burgericon = function ($) {
+  /******************************************************************
+      VARS
+  ******************************************************************/
+  // your code here
+  var $PrimaryMenue = $('#primary-menu');
+  /******************************************************************
+      EVENTS
+  ******************************************************************/
+
+  $('.burger-icon__lines').on('click', showNavigation);
+  $(window).on('resize', toggleAnimation);
+  /******************************************************************
+      FUNCTIONS
+  ******************************************************************/
+  // your code here
+
+  function showNavigation() {
+    console.log("funktion läuft");
+
+    if ($($PrimaryMenue).css('display') == "none") {
+      $($PrimaryMenue).slideToggle();
+      $($PrimaryMenue).css({
+        "display": "flex",
+        "list-style": "none",
+        "flex-direction": "column"
+      });
+    } else {
+      $($PrimaryMenue).slideUp("slow");
+    }
+  }
+
+  function toggleAnimation() {
+    if ($(window).width() >= 944) {
+      $($PrimaryMenue).css({
+        "display": "flex",
+        "list-style": "none",
+        "flex-direction": "row"
+      });
+    } else {
+      $($PrimaryMenue).css({
+        "display": "none",
+        "list-style": "none"
+      });
+    }
+  }
+
+  function transformBurgerIntoCross() {}
+  /******************************************************************
+      PUBLIC_FUNCTIONS
+  ******************************************************************/
+
+
+  return {// your code here
+  };
+}(jQuery);
+"use strict";
+
 var mainNavigation = function ($) {
   /******************************************************************
       VARS
@@ -32,17 +90,17 @@ var mainNavigation = function ($) {
   /******************************************************************
       EVENTS
   ******************************************************************/
-  appendIconToNav(); //appendSmallIconsToListitems();
+  //appendIconToNav();
+  //appendSmallIconsToListitems();
 
   /******************************************************************
       FUNCTIONS
   ******************************************************************/
   // your code here
-
   function appendIconToNav() {
     $('#primary-menu').prepend('<li class="icon"></li>');
     var $icon = $('.icon');
-    $icon.append('<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/cherry-blossom-1-2.png" class="blossom-icon">');
+    $icon.append('<img src="http://japanblog.local/wp-content/uploads/2019/09/cherry-blossom-1.png" class="blossom-icon">');
     $icon.css({
       "text-align": "center"
     });

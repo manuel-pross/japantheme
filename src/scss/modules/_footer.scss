@@ -1,5 +1,6 @@
 .footer {
     color: $white;
+    margin: 70px 0px 0px 0px;
 
     &__upper {
         background-color: $lightestSakura;
@@ -32,30 +33,20 @@
         @include medium {
             width: 50%;
             align-items: center;
+            padding: 0px 0px 10px 0px;
         }
 
         @include large {
-
+            align-items: left;
         }
     }
 
     &__heading {
         text-align: center;
-    }
-
-    &__mail {
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-
-    &__mail-svg {
-        fill: $darkerSakura;
-        width: 50px;
-        height: 50px;
+        padding: 40px 0px 40px 0px;
+        margin: 0px 0px 0px 0px;
 
         @include small {
-
         }
 
         @include medium {
@@ -63,8 +54,31 @@
         }
 
         @include large {
-
+            text-align: left;
         }
+    }
+
+    &__mail {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__mail-svg {
+        fill: $white;
+        width: 35px;
+        height: 35px;
+
+        &:hover {
+            .footer_mail-link > a{
+                color: black;
+            }
+        }
+    }
+
+    &__mail-link {
+
     }
 
     &__mail-adress {
@@ -72,11 +86,6 @@
         text-decoration: none;
         color: $white;
         transition: color 0.5s;
-
-        &:hover {
-            color: $darkerSakura;
-        }
-
     }
 
     &__phone {
@@ -87,9 +96,38 @@
     }
 
     &__phone-svg {
-        fill: $darkerSakura;
-        width: 50px;
-        height: 50px;
+        fill: $white;
+        width: 35px;
+        height: 35px;
+    }
+
+    &__phone-number {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: $white;
+        transition: color 0.5s;
+    }
+
+    &__list {
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    &__list-item {
+        padding: 20px 40px 20px 0px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $white;
+        transition: color 0.5s;
+    }
+
+    &__lower {
+        background-color: darken($lightestSakura, 10%);
+        display: flex;
+        justify-content: center;
 
         @include small {
 
@@ -102,56 +140,6 @@
         @include large {
 
         }
-    }
-
-    &__phone-number {
-        text-decoration: none;
-        font-size: 1.1rem;
-        color: $white;
-        transition: color 0.5s;
-
-        &:hover {
-            color: $darkerSakura;
-        }
-
-        @include small{
-
-        }
-
-        @include medium{
-
-        }
-
-        @include large{
-
-        }
-    }
-
-    &__list {
-        margin: 10px 0px 2px 0px;
-        padding-left: 0px;
-        text-align: center;
-        list-style-type: none;
-    }
-
-    &__list-item {
-        margin-bottom: 5px;
-    }
-
-    &__link {
-        text-decoration: none;
-        color: $white;
-        transition: color 0.5s;
-
-        &:hover {
-            color: $darkerSakura;
-        }
-    }
-
-    &__lower {
-        background-color: darken($lightestSakura, 10%);
-        display: flex;
-        justify-content: center;
     }
 
     &__icon {

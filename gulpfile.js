@@ -99,7 +99,7 @@ gulp.task('scripts', function() {
 // Watch Files For Changes
 gulp.task('watch', function () {
     browserSync.init({
-        proxy: 'http://localhost/japanBlog/'
+        proxy: 'http://japanblog.local'
     });
     gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
     gulp.watch('**/*.php').on('change', browserSync.reload);

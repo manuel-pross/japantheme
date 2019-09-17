@@ -7,7 +7,7 @@ const mainNavigation = (function($) {
     /******************************************************************
         EVENTS
     ******************************************************************/
-    appendIconToNav();
+    //appendIconToNav();
     //appendSmallIconsToListitems();
 
     /******************************************************************
@@ -17,7 +17,7 @@ const mainNavigation = (function($) {
     function appendIconToNav() {
         $('#primary-menu').prepend('<li class="icon"></li>');
         const $icon = $('.icon');
-        $icon.append('<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/cherry-blossom-1-2.png" class="blossom-icon">');
+        $icon.append('<img src="http://japanblog.local/wp-content/uploads/2019/09/cherry-blossom-1.png" class="blossom-icon">');
         $icon.css({"text-align" : "center"});
         $('.blossom-icon').css({'padding' : '10px 0px 0px 5px'});
     }

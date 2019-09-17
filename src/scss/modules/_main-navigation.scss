@@ -1,29 +1,8 @@
-.main-navigation{
-
-    &__container {
-        height: 75px;
-        width: 100%;
-
-        background-color: $lightestSakura;
-        text-align: center;
-
-        @include small {
-
-        }
-
-        @include medium {
-            display: none;
-        }
-
-        @include large {
-
-        }
-    }
+.main-navigation {
 
     ul {
-        display: flex;
+        display: none;
         padding-left: 0;
-        flex-direction: column;
         background-color: $lightestSakura;
         margin-top: 0;
         margin-bottom: 0;
@@ -33,6 +12,7 @@
         }
 
         @include medium {
+            display: flex;
             flex-direction: row;
             margin: 0;
 
@@ -77,7 +57,7 @@
         text-align: center;
         display: block;
         border-bottom: solid 3px transparent;
-        padding: 25px 10px 25px 10px;
+        padding: 40px 10px 40px 10px;
         font-weight: bold;
         text-decoration: none;
         color: $white;

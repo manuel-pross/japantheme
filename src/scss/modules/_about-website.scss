@@ -5,19 +5,32 @@
     clear: both;
     text-align: center;
 
-    margin: 200px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
+
+    @include small {
+    }
+
+    @include medium{
+
+    }
+
+    @include large{
+
+    }
 
 
     &__heading {
         text-align: center;
         text-transform: uppercase;
-        padding: 5px 5px;
+        padding: 40px 0px 40px 0px;
+        margin: 0px 0px 0px 0px;
 
         @include small {
         }
 
         @include medium{
             text-align: left;
+            padding: 40px 0px 40px 40px;
         }
 
         @include large{
@@ -26,7 +39,8 @@
     }
 
     &__description {
-        padding: 0px 5px 5px 5px;
+        padding: 0px 40px 40px 40px;
+        margin: 0px 0px 0px 0px;
 
         @include small {
         }

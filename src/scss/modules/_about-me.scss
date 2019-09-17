@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
 
-    margin: 200px 5px 5px 0px;
+    margin: 100px 0px 0px 0px;
+    padding: 0px 40px 0px 40px;
 
         @include small {
 
@@ -91,11 +92,25 @@
     &__textcontainer {
         width: 100%;
         text-align: center;
+
+        @include small {
+
+        }
+
+        @include medium {
+            text-align: left;
+        }
+
+        @include large {
+
+        }
     }
 
     &__textcontainer-heading {
         text-transform: uppercase;
         text-align: center;
+        padding: 60px 0px 40px 0px;
+        margin: 0px 0px 0px 0px;
 
             @include small {
 
@@ -103,11 +118,27 @@
 
             @include medium {
                 text-align: left;
-                margin-top: 5px;
+                padding: 60px 0px 40px 40px;
+            }
+
+            @include large {
+
             }
     }
 
     &__textcontainer-description {
+
+        @include small {
+
+        }
+
+        @include medium {
+            padding: 0px 40px 0px 40px;
+        }
+
+        @include large {
+
+        }
 
     }
 }
