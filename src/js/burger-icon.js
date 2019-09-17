@@ -5,42 +5,42 @@ const burgericon = (function($) {
    ******************************************************************/
    // your code here
 
-   let $PrimaryMenue = $('#primary-menu');
+   const $PrimaryMenue = $('#primary-menu');
+   const $lines = $('.burger-icon__lines');
    /******************************************************************
        EVENTS
    ******************************************************************/
-  $('.burger-icon__lines').on('click', showNavigation);
-  $(window).on('resize', toggleAnimation);
+  $lines.on('click', function() {
+    toggleNavigation();
+    transformBurgerIntoCross();
+
+  });
+  $(window).on('resize', showNavigation);
 
    /******************************************************************
        FUNCTIONS
    ******************************************************************/
    // your code here
 
-   function showNavigation() {
-      console.log("funktion läuft");
-      if($($PrimaryMenue).css('display') == "none")
-      {
-         $($PrimaryMenue).slideToggle();
-         $($PrimaryMenue).css({"display" : "flex", "list-style" : "none", "flex-direction" : "column"});
-      }
-      else {
-         $($PrimaryMenue).slideUp("slow");
-      }
+   function toggleNavigation() {
+
+      $PrimaryMenue.slideToggle();
+      $PrimaryMenue.toggleClass('is-active');
+
    }
 
-   function toggleAnimation() {
+   function showNavigation() {
       if($(window).width() >= 944)
       {
-       $($PrimaryMenue).css({"display" : "flex", "list-style" : "none", "flex-direction" : "row"})
+       $PrimaryMenue.addClass('is-active');
       }
       else {
-       $($PrimaryMenue).css({"display" : "none", "list-style" : "none"})
+       $PrimaryMenue.removeClass('is-active');
       }
    }
 
    function transformBurgerIntoCross() {
-
+    $lines.toggleClass('is-crossed');
    }
    /******************************************************************
        PUBLIC_FUNCTIONS

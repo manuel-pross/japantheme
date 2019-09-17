@@ -29,48 +29,37 @@ var burgericon = function ($) {
   ******************************************************************/
   // your code here
   var $PrimaryMenue = $('#primary-menu');
+  var $lines = $('.burger-icon__lines');
   /******************************************************************
       EVENTS
   ******************************************************************/
 
-  $('.burger-icon__lines').on('click', showNavigation);
-  $(window).on('resize', toggleAnimation);
+  $lines.on('click', function () {
+    toggleNavigation();
+    transformBurgerIntoCross();
+  });
+  $(window).on('resize', showNavigation);
   /******************************************************************
       FUNCTIONS
   ******************************************************************/
   // your code here
 
+  function toggleNavigation() {
+    $PrimaryMenue.slideToggle();
+    $PrimaryMenue.toggleClass('is-active');
+  }
+
   function showNavigation() {
-    console.log("funktion läuft");
-
-    if ($($PrimaryMenue).css('display') == "none") {
-      $($PrimaryMenue).slideToggle();
-      $($PrimaryMenue).css({
-        "display": "flex",
-        "list-style": "none",
-        "flex-direction": "column"
-      });
-    } else {
-      $($PrimaryMenue).slideUp("slow");
-    }
-  }
-
-  function toggleAnimation() {
     if ($(window).width() >= 944) {
-      $($PrimaryMenue).css({
-        "display": "flex",
-        "list-style": "none",
-        "flex-direction": "row"
-      });
+      $PrimaryMenue.addClass('is-active');
     } else {
-      $($PrimaryMenue).css({
-        "display": "none",
-        "list-style": "none"
-      });
+      $PrimaryMenue.removeClass('is-active');
     }
   }
 
-  function transformBurgerIntoCross() {}
+  function transformBurgerIntoCross() {
+    $lines.toggleClass('is-crossed');
+  }
   /******************************************************************
       PUBLIC_FUNCTIONS
   ******************************************************************/

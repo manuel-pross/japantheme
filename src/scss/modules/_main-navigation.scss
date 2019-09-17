@@ -1,6 +1,8 @@
 .main-navigation {
 
     ul {
+        list-style: none;
+        flex-direction: column;
         display: none;
         padding-left: 0;
         background-color: $lightestSakura;
@@ -22,6 +24,10 @@
 
         @include large {
 
+        }
+
+        &.is-active {
+            display : flex !important;
         }
 
     }

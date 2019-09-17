@@ -26,9 +26,7 @@
 	<header id="masthead" class="site-header">
 	<div class="burger-icon">
 		<div class="burger-icon__lines">
-			<div class="burger-icon__line burger-icon__line1"></div>
-			<div class="burger-icon__line burger-icon"></div>
-			<div class="burger-icon__line burger-icon__line3"></div>
+			<div class="burger-icon__line" role="menu"></div>
 		</div>
 		</label>
 	</div>
