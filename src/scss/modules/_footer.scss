@@ -1,6 +1,19 @@
 .footer {
     color: $white;
-    margin: 70px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
+
+    @include small {
+
+    }
+
+    @include medium {
+        flex-direction: row;
+        margin: 200px 0px 0px 0px;
+    }
+
+    @include large {
+
+    }
 
     &__upper {
         background-color: $lightestSakura;
@@ -21,7 +34,7 @@
         }
     }
 
-    &__container{
+    &__container {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -59,31 +72,33 @@
     }
 
     &__mail {
+        width: 100%;
+    }
+
+    &__mail-link {
         display: flex;
         align-items: center;
-        text-align: center;
-        width: 100%;
+        text-decoration: none;
+
+        &:hover {
+            .footer__mail-svg {
+                fill: $lighterSakura;
+            }
+
+            .footer__mail-text {
+                color: $lighterSakura;
+            }
+        }
     }
 
     &__mail-svg {
         fill: $white;
         width: 35px;
         height: 35px;
-
-        &:hover {
-            .footer_mail-link > a{
-                color: black;
-            }
+        transition: fill 0.5s;
         }
-    }
 
-    &__mail-link {
-
-    }
-
-    &__mail-adress {
-        font-size: 1.1rem;
-        text-decoration: none;
+    &__mail-text {
         color: $white;
         transition: color 0.5s;
     }
@@ -95,15 +110,30 @@
         width: 100%;
     }
 
+    &__phone-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        &:hover {
+            .footer__phone-svg {
+                fill: $lighterSakura;
+            }
+
+            .footer__phone-number {
+                color: $lighterSakura;
+            }
+        }
+    }
+
     &__phone-svg {
         fill: $white;
         width: 35px;
         height: 35px;
+        transition: fill 0.5s;
     }
 
     &__phone-number {
-        text-decoration: none;
-        font-size: 1.1rem;
         color: $white;
         transition: color 0.5s;
     }
@@ -122,6 +152,10 @@
         text-decoration: none;
         color: $white;
         transition: color 0.5s;
+
+        &:hover {
+            color: $lighterSakura;
+        }
     }
 
     &__lower {
@@ -148,13 +182,13 @@
 
             &:hover {
                 .footer__svg {
-                    fill: $white;
+                    fill: $lighterSakura;
                 }
             }
     }
 
     &__svg {
-        fill: black;
+        fill: $white;
         transition: fill 0.5s;
     }
 }

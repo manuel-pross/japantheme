@@ -8,38 +8,49 @@
  */
 
 ?>
+<?php
+	$image = get_field('img');
+	//$about_me = get_field('about_me');
+	//var_dump($about_me);
+?>
+
 <div class="about-me">
 	<div class="about-me__imagecontainer">
-		<img src="http://japanblog.local/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_middle.jpg" class="about-me__portraitmedium">
-		<img src="http://japanblog.local/wp-content/uploads/2019/09/bewerbungsbild_zugeschnitten_big.jpg" class="about-me__portraitlarge">
+		<?php if( !empty($image) ): ?>
+			<img
+				class="about-me__portrait"
+				alt="<?php echo $image['alt']; ?>"
+				src="<?php echo $image['url']; ?>"
+				srcset="<?php echo wp_get_attachment_image_srcset( $image['id'], 'medium', null ); ?>"
+				sizes="(max-width: 320px) 300px, 768px"
+				/>
+		<?php endif; ?>
 	</div>
 	<div class="about-me__textcontainer">
-		<h2 class="about-me__textcontainer-heading">Über mich</h2>
+	<?php if( !empty(get_field('about_me')) ): ?>
+		<h2 class="about-me__textcontainer-heading">
+			<?php the_field('about_me'); ?>
+		</h2>
+	<?php endif; ?>
 		<p class="about-me__textcontainer-description">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-				non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<?php the_field('about_me_description') ?>
 		</p>
 	</div>
 </div>
 
 <div class="about-website">
-	<h2 class="about-website__heading">Was dich hier erwartet</h2>
+	<h2 class="about-website__heading">
+		<?php the_field('redfield_heading') ?>
+	</h2>
 	<p class="about-website__description">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-		eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco
-		laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-		dolor in reprehenderit in voluptate velit esse cillum dolore eu
-		fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est
-		laborum.
+		<?php the_field('about_website_description') ?>
 	</p>
 </div>
 
 <div class="mainpicture-gallery">
-	<h2 class="mainpicture-gallery__heading">Hier ein kleiner Ausblick</h2>
+	<h2 class="mainpicture-gallery__heading">
+		<?php the_field('slider_heading')?>
+	</h2>
 	<div class="mainpicture-gallery__slider">
 		<img src="http://japanblog.local/wp-content/uploads/2019/09/arrow-left.png" alt="arrow for previous picture" class="mainpicture-gallery__slider-prev">
 		<div class="mainpicture-gallery__slider-inner">

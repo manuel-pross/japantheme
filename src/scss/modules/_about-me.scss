@@ -11,9 +11,11 @@
 
         @include medium {
             flex-direction: row;
+            margin: 200px 0px 0px 0px;
         }
 
         @include large {
+
         }
 
     &__imagecontainer {
@@ -41,7 +43,7 @@
         }
     }
 
-    &__portraitmedium {
+    &__portrait {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -60,32 +62,6 @@
 
             @include large {
                 display: none;
-            }
-    }
-
-    &__portraitlarge {
-        position: absolute;
-
-        display: none;
-
-            @include small {
-
-            }
-
-            @include medium {
-
-            }
-
-            @include large {
-                display: inline-block;
-
-                top: 50%;
-                left: 50%;
-
-                height: 100%;
-                width: auto;
-
-                transform: translate(-50%, -50%);
             }
     }
 

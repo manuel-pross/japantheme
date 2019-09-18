@@ -582,6 +582,7 @@ html {
 @media only screen and (min-width: 961px) {
   .about-me {
     flex-direction: row;
+    margin: 200px 0px 0px 0px;
   }
 }
 
@@ -610,7 +611,7 @@ html {
   }
 }
 
-.about-me__portraitmedium {
+.about-me__portrait {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -620,24 +621,8 @@ html {
 }
 
 @media only screen and (min-width: 1361px) {
-  .about-me__portraitmedium {
+  .about-me__portrait {
     display: none;
-  }
-}
-
-.about-me__portraitlarge {
-  position: absolute;
-  display: none;
-}
-
-@media only screen and (min-width: 1361px) {
-  .about-me__portraitlarge {
-    display: inline-block;
-    top: 50%;
-    left: 50%;
-    height: 100%;
-    width: auto;
-    transform: translate(-50%, -50%);
   }
 }
 
@@ -678,6 +663,12 @@ html {
   clear: both;
   text-align: center;
   margin: 100px 0px 0px 0px;
+}
+
+@media only screen and (min-width: 961px) {
+  .about-website {
+    margin: 200px 0px 0px 0px;
+  }
 }
 
 .about-website__heading {
@@ -782,7 +773,14 @@ html {
 
 .footer {
   color: #FFFFFF;
-  margin: 70px 0px 0px 0px;
+  margin: 100px 0px 0px 0px;
+}
+
+@media only screen and (min-width: 961px) {
+  .footer {
+    flex-direction: row;
+    margin: 200px 0px 0px 0px;
+  }
 }
 
 .footer__upper {
@@ -832,25 +830,31 @@ html {
 }
 
 .footer__mail {
+  width: 100%;
+}
+
+.footer__mail-link {
   display: flex;
   align-items: center;
-  text-align: center;
-  width: 100%;
+  text-decoration: none;
+}
+
+.footer__mail-link:hover .footer__mail-svg {
+  fill: #C25367;
+}
+
+.footer__mail-link:hover .footer__mail-text {
+  color: #C25367;
 }
 
 .footer__mail-svg {
   fill: #FFFFFF;
   width: 35px;
   height: 35px;
+  transition: fill 0.5s;
 }
 
-.footer__mail-svg:hover .footer_mail-link > a {
-  color: black;
-}
-
-.footer__mail-adress {
-  font-size: 1.1rem;
-  text-decoration: none;
+.footer__mail-text {
   color: #FFFFFF;
   transition: color 0.5s;
 }
@@ -862,15 +866,28 @@ html {
   width: 100%;
 }
 
+.footer__phone-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer__phone-link:hover .footer__phone-svg {
+  fill: #C25367;
+}
+
+.footer__phone-link:hover .footer__phone-number {
+  color: #C25367;
+}
+
 .footer__phone-svg {
   fill: #FFFFFF;
   width: 35px;
   height: 35px;
+  transition: fill 0.5s;
 }
 
 .footer__phone-number {
-  text-decoration: none;
-  font-size: 1.1rem;
   color: #FFFFFF;
   transition: color 0.5s;
 }
@@ -891,6 +908,10 @@ html {
   transition: color 0.5s;
 }
 
+.footer__link:hover {
+  color: #C25367;
+}
+
 .footer__lower {
   background-color: #e26278;
   display: flex;
@@ -903,11 +924,11 @@ html {
 }
 
 .footer__icon:hover .footer__svg {
-  fill: #FFFFFF;
+  fill: #C25367;
 }
 
 .footer__svg {
-  fill: black;
+  fill: #FFFFFF;
   transition: fill 0.5s;
 }
 

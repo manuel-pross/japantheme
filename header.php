@@ -10,6 +10,10 @@
  */
 
 ?>
+
+<?php
+	$image = get_field('header_img');
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -32,9 +36,6 @@
 	</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<!-- <div class="main-navigation__container">
-				<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/cherry-blossom-1-2.png" class="main-navigation__icon">
-			</div> -->
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -43,10 +44,33 @@
 			?>
 		</nav><!-- #site-navigation -->
 		<div class="image-header">
-			<img class="image-header__navpicture" src="http://japanblog.local/wp-content/uploads/2019/09/20190809_190722.jpg">
+		<?php
+			if( !empty($image) ): ?>
+				<img
+				src="<?php echo $image['url']; ?>"
+				alt="<?php echo $image['alt']; ?>"
+				class="image-header__navpicture"
+				/>
+		<?php endif; ?>
 			<div class="image-header__navpicture-description-container">
-				<h1 class="image-header__entry-title">Japan</h1>
-				<p class="image-header__description">Discover a new world</p>
+				<h1 class="image-header__entry-title">
+					<?php
+						if(strlen(get_field('header_title')) <= 5) {
+							the_field('header_title');
+						}else {
+							echo "ZU LANG!!! SIEHST DOCH DASS ES KACKE AUSSIEHT. HÖCHSTENS 5 ZEICHEN!!!";
+						}
+					?>
+				</h1>
+				<p class="image-header__description">
+					<?php
+						if(strlen(get_field('header_description')) <= 20) {
+							the_field('header_description');
+						}else {
+							echo "ZU LANG!!! SIEHST DOCH DASS ES KACKE AUSSIEHT. HÖCHSTENS 20 ZEICHEN!!!";
+						}
+					?>
+				</p>
 			</div>
 		</div>
 	</header><!-- #masthead -->
