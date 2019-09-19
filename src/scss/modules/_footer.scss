@@ -2,46 +2,27 @@
     color: $white;
     margin: 100px 0px 0px 0px;
 
-    @include small {
-
-    }
-
     @include medium {
         flex-direction: row;
         margin: 200px 0px 0px 0px;
     }
 
-    @include large {
-
-    }
-
     &__upper {
         background-color: $lightestSakura;
+
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        @include small {
-
-        }
-
         @include medium {
             flex-direction: row;
-        }
-
-        @include large {
-
         }
     }
 
     &__container {
-        text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        @include small {
-        }
 
         @include medium {
             width: 50%;
@@ -55,15 +36,13 @@
     }
 
     &__heading {
+        font-size: 1.3rem;
         text-align: center;
         padding: 40px 0px 40px 0px;
         margin: 0px 0px 0px 0px;
 
-        @include small {
-        }
-
         @include medium {
-
+            font-size: 1.5rem;
         }
 
         @include large {
@@ -100,7 +79,13 @@
 
     &__mail-text {
         color: $white;
+
+        font-size: 0.9rem;
         transition: color 0.5s;
+
+        @include medium {
+            font-size: 1rem;
+        }
     }
 
     &__phone {
@@ -128,14 +113,21 @@
 
     &__phone-svg {
         fill: $white;
+
         width: 35px;
         height: 35px;
+
         transition: fill 0.5s;
     }
 
     &__phone-number {
         color: $white;
+        font-size: 0.9rem;
         transition: color 0.5s;
+
+        @include medium {
+            font-size: 1rem;
+        }
     }
 
     &__list {
@@ -145,7 +137,12 @@
     }
 
     &__list-item {
+        font-size: 0.9rem;
         padding: 20px 40px 20px 0px;
+
+        @include medium {
+            font-size: 1rem;
+        }
     }
 
     &__link {
@@ -162,18 +159,6 @@
         background-color: darken($lightestSakura, 10%);
         display: flex;
         justify-content: center;
-
-        @include small {
-
-        }
-
-        @include medium {
-
-        }
-
-        @include large {
-
-        }
     }
 
     &__icon {

@@ -5,17 +5,9 @@
     margin: 100px 0px 0px 0px;
     padding: 0px 40px 0px 40px;
 
-        @include small {
-
-        }
-
         @include medium {
             flex-direction: row;
             margin: 200px 0px 0px 0px;
-        }
-
-        @include large {
-
         }
 
     &__imagecontainer {
@@ -27,10 +19,6 @@
         position: relative;
         border-radius: 100%;
         overflow: hidden;
-
-        @include small {
-
-        }
 
         @include medium {
             flex: 0 0 400px;
@@ -52,33 +40,14 @@
         width: auto;
 
         transform: translate(-50%, -50%);
-
-            @include small {
-
-            }
-
-            @include medium {
-            }
-
-            @include large {
-                display: none;
-            }
     }
 
     &__textcontainer {
         width: 100%;
         text-align: center;
 
-        @include small {
-
-        }
-
         @include medium {
             text-align: left;
-        }
-
-        @include large {
-
         }
     }
 
@@ -88,33 +57,16 @@
         padding: 60px 0px 40px 0px;
         margin: 0px 0px 0px 0px;
 
-            @include small {
-
-            }
-
             @include medium {
                 text-align: left;
                 padding: 60px 0px 40px 40px;
-            }
-
-            @include large {
-
             }
     }
 
     &__textcontainer-description {
 
-        @include small {
-
-        }
-
         @include medium {
             padding: 0px 40px 0px 40px;
         }
-
-        @include large {
-
-        }
-
     }
 }

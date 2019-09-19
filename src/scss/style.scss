@@ -1,9 +1,11 @@
 @import 'setup/includes';
 @import 'setup/normalize';
+@import 'setup/fonts';
 @import 'setup/variables';
 @import 'setup/mixins';
 
 @import 'base/defaults';
+@import 'base/text';
 
 @import 'modules/home';
 @import 'modules/main-navigation';

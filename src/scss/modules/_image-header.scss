@@ -3,15 +3,6 @@
     position: relative;
     height: auto;
 
-    @include small {
-    }
-
-    @include medium{
-    }
-
-    @include large{
-    }
-
     &__navpicture{
         width: 100%;
         height: auto;
@@ -22,33 +13,24 @@
         position: absolute;
         top: 20%;
         left: 50%;
-
         text-align: center;
         padding: 10px 5px 10px 5px;
-
         transform: translate(-50%);
-
         background-color: $lighterSakura;
         border-radius: 10px;
-
         width: 160px;
         height: 60px;
-
-        @include small {
-
-        }
 
         @include medium {
             top: 20%;
             left: 5%;
-
             transform: none;
-
             width: 230px;
             height: 80px;
         }
 
         @include large{
+            left: 3%;
             width: 260px;
             height: 90px;
         }
@@ -59,10 +41,6 @@
         font-size: 1.5rem;
         color: $white;
         text-transform: uppercase;
-
-        @include small {
-
-        }
 
         @include medium{
             font-size: 2rem
@@ -76,11 +54,6 @@
     &__description {
         font-size: 0.75rem;
         color: $white;
-        font-weight: bolder;
-
-        @include small {
-
-        }
 
         @include medium{
             font-size: 1rem;
