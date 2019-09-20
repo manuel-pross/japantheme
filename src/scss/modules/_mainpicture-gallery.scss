@@ -19,21 +19,12 @@
         cursor: pointer;
         height: 100%;
         width: auto;
-
         position: relative;
         margin-right: -45px;
         z-index: 100;
 
-        @include small {
-
-        }
-
         @include medium {
             margin-top: 300px;
-        }
-
-        @include large {
-
         }
     }
 
@@ -55,16 +46,21 @@
         display: inline-block;
         width: 100%;
         height: auto;
+        transition: transform 0.3s linear;
+
+        &:hover {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1.1);
+        }
     }
 
     .is-passive {
         display: none;
         width: 100%;
         height: auto;
-    }
-
-    &__description {
-
     }
 
     &__slider-next {
@@ -77,16 +73,8 @@
         margin-left: -45px;
         z-index: 100;
 
-        @include small {
-
-        }
-
         @include medium {
             margin-top: 300px;
-        }
-
-        @include large {
-
         }
     }
 }

@@ -4,3 +4,38 @@ h3 {
    font-weight: normal;
    font-family: $font-main-3;
 }
+
+h1 {
+   font-size: 1.5rem;
+
+   @include medium{
+      font-size: 2rem
+  }
+
+  @include large{
+      font-size: 2.25rem;
+  }
+}
+
+h2 {
+   font-size: 1.25rem;
+
+   @include medium{
+      font-size: 1.5rem
+  }
+
+  @include large{
+      font-size: 1.75rem;
+  }
+}
+h3 {
+   font-size: 1rem;
+
+   @include medium{
+      font-size: 1.25rem
+  }
+
+  @include large{
+      font-size: 1.5rem;
+  }
+}

@@ -477,6 +477,54 @@ h3 {
   font-family: "Montserrat-black";
 }
 
+h1 {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 961px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 961px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 961px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
 .main-navigation ul {
   list-style: none;
   flex-direction: column;
@@ -581,21 +629,8 @@ h3 {
 
 .image-header__entry-title {
   margin: 0px 0px 0px 0px;
-  font-size: 1.5rem;
   color: #FFFFFF;
   text-transform: uppercase;
-}
-
-@media only screen and (min-width: 961px) {
-  .image-header__entry-title {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1361px) {
-  .image-header__entry-title {
-    font-size: 2.25rem;
-  }
 }
 
 .image-header__description {
@@ -784,6 +819,15 @@ h3 {
   display: inline-block;
   width: 100%;
   height: auto;
+  transition: transform 0.3s linear;
+}
+
+.mainpicture-gallery .is-active:hover {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1.1);
 }
 
 .mainpicture-gallery .is-passive {
