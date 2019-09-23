@@ -1,4 +1,11 @@
 html {
     font-family: $font-main-1;
     font-size: 16px;
+    background-color: lightgray;
+}
+
+body {
+    background-color: $white;
+    max-width: 1920px;
+    margin: 0 auto;
 }

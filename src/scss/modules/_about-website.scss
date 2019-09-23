@@ -22,7 +22,7 @@
     &__heading {
         text-align: center;
         text-transform: uppercase;
-        padding: 40px 0px 40px 0px;
+        padding: 40px 0px 20px 0px;
         margin: 0px 0px 0px 0px;
 
         @include small {
@@ -30,7 +30,7 @@
 
         @include medium{
             text-align: left;
-            padding: 40px 0px 40px 40px;
+            padding: 40px 0px 20px 3.5rem;
         }
 
         @include large{
@@ -47,6 +47,7 @@
 
         @include medium{
             text-align: left;
+            padding-left: 3.5rem;
         }
 
         @include large{

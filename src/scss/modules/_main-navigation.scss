@@ -3,15 +3,12 @@
     ul {
         list-style: none;
         flex-direction: column;
+        justify-content: center;
         display: none;
         padding-left: 0;
         background-color: $lightestSakura;
         margin-top: 0;
         margin-bottom: 0;
-
-        @include small{
-
-        }
 
         @include medium {
             display: flex;
@@ -22,30 +19,18 @@
             padding-left: 40px;
         }
 
-        @include large {
-
-        }
-
         &.is-active {
             display : flex !important;
         }
-
     }
 
     li {
-
-        @include small {
-
-        }
 
         @include medium {
             display: flex;
             align-items: stretch;
             margin-right: 40px;
-        }
-
-        @include large {
-
+            font-size: 1.2rem;
         }
 
         &:first-child {
@@ -55,7 +40,6 @@
 
                 align-items: center;
             }
-
         }
     }
 

@@ -10,6 +10,7 @@
 ?>
 <?php
 	$image = get_field('img');
+	$images = get_field('images');
 ?>
 
 <div class="about-me">
@@ -25,14 +26,16 @@
 		<?php endif; ?>
 	</div>
 	<div class="about-me__textcontainer">
-	<?php if( !empty(get_field('about_me')) ): ?>
-		<h2 class="about-me__textcontainer-heading">
-			<?php the_field('about_me'); ?>
-		</h2>
-	<?php endif; ?>
-		<p class="about-me__textcontainer-description">
-			<?php the_field('about_me_description') ?>
-		</p>
+		<div class="about-me__textcontainer-inner">
+			<?php if( !empty(get_field('about_me')) ): ?>
+				<h2 class="about-me__textcontainer-heading">
+					<?php the_field('about_me'); ?>
+				</h2>
+			<?php endif; ?>
+				<p class="about-me__textcontainer-description">
+					<?php the_field('about_me_description') ?>
+				</p>
+		</div>
 	</div>
 </div>
 
@@ -51,50 +54,20 @@
 	</h2>
 	<div class="mainpicture-gallery__slider">
 		<img src="http://japanblog.local/wp-content/uploads/2019/09/arrow-left.png" alt="arrow for previous picture" class="mainpicture-gallery__slider-prev">
-		<div class="mainpicture-gallery__slider-inner">
-			<div class="mainpicture-gallery__image-container is-active">
-				<figure class="mainpicture-gallery__picture-caption">
-					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190811_144152.jpg" alt="active picture" class="mainpicture-gallery__slider-picture">
-					<figcaption class="mainpicture-gallery__picture-subline">Osaka - Castle</figcaption>
-				</figure>
-			</div>
-			<div class="mainpicture-gallery__image-container is-passive">
-				<figure class="mainpicture-gallery__picture-caption">
-					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190809_174328.jpg" alt="passive picture 1" class="mainpicture-gallery__slider-picture">
-					<figcaption class="mainpicture-gallery__picture-subline">Hirschpark - Nara</figcaption>
-				</figure>
-			</div>
-			<div class="mainpicture-gallery__image-container is-passive">
-				<figure class="mainpicture-gallery__picture-caption">
-					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190810_142320.jpg" alt="passive picture 2" class="mainpicture-gallery__slider-picture">
-					<figcaption class="mainpicture-gallery__picture-subline">Kinkaku-ji - Kyoto</figcaption>
-				</figure>
-			</div>
-			<div class="mainpicture-gallery__image-container is-passive">
-				<figure class="mainpicture-gallery__picture-caption">
-					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190807_120158.jpg" alt="passive picture 3" class="mainpicture-gallery__slider-picture">
-					<figcaption class="mainpicture-gallery__picture-subline">Hozu Fluss - Kyoto</figcaption>
-				</figure>
-			</div>
-			<div class="mainpicture-gallery__image-container is-passive">
-				<figure class="mainpicture-gallery__picture-caption">
-					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190807_103337.jpg" alt="passive picture 4" class="mainpicture-gallery__slider-picture">
-					<figcaption class="mainpicture-gallery__picture-subline">Arashiyama - Kyoto</figcaption>
-				</figure>
-			</div>
-			<div class="mainpicture-gallery__image-container is-passive">
-				<figure class="mainpicture-gallery__picture-caption">
-					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190810_113640.jpg" alt="passive picture 5" class="mainpicture-gallery__slider-picture">
-					<figcaption class="mainpicture-gallery__picture-subline">Fushimi Inari Taisha - Kyoto</figcaption>
-				</figure>
-			</div>
-			<div class="mainpicture-gallery__image-container is-passive">
-				<figure class="mainpicture-gallery__picture-caption">
-					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190805_135402.jpg" alt="passive picture 6" class="mainpicture-gallery__slider-picture">
-					<figcaption class="mainpicture-gallery__picture-subline">Fujiyama</figcaption>
-				</figure>
-			</div>
-		</div>
+		<?php
+			$size = 'full'; // (thumbnail, medium, large, full or custom size)
+			if( $images ): ?>
+				<ul class="mainpicture-gallery__slider-inner">
+					<?php foreach( $images as $image ): ?>
+							<li class="mainpicture-gallery__image-container is-passive">
+								<figure class="mainpicture-gallery__picture-caption">
+									<?php echo wp_get_attachment_image( $image['ID'], $size, false,  array( "class" => "mainpicture-gallery__slider-picture" ) ); ?>
+									<figcaption class="mainpicture-gallery__picture-subline"><?php echo $image['caption']; ?></figcaption>
+								</figure>
+							</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
 		<img src="http://japanblog.local/wp-content/uploads/2019/09/arrow-right.png" alt="arrow for next picture" class="mainpicture-gallery__slider-next">
 	</div>
 </div>

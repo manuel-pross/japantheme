@@ -468,6 +468,13 @@ th {
 html {
   font-family: "Montserrat-regular";
   font-size: 16px;
+  background-color: lightgray;
+}
+
+body {
+  background-color: #FFFFFF;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 h1,
@@ -528,6 +535,7 @@ h3 {
 .main-navigation ul {
   list-style: none;
   flex-direction: column;
+  justify-content: center;
   display: none;
   padding-left: 0;
   background-color: #EA8D9D;
@@ -554,6 +562,7 @@ h3 {
     display: flex;
     align-items: stretch;
     margin-right: 40px;
+    font-size: 1.2rem;
   }
 }
 
@@ -587,7 +596,13 @@ h3 {
 .image-header {
   overflow: hidden;
   position: relative;
-  height: auto;
+  height: 40vh;
+}
+
+@media only screen and (min-width: 961px) {
+  .image-header {
+    height: 90vh;
+  }
 }
 
 .image-header__navpicture {
@@ -612,7 +627,7 @@ h3 {
 @media only screen and (min-width: 961px) {
   .image-header__navpicture-description-container {
     top: 20%;
-    left: 5%;
+    left: 1.1rem;
     transform: none;
     width: 230px;
     height: 80px;
@@ -678,6 +693,7 @@ h3 {
 @media only screen and (min-width: 961px) {
   .about-me__imagecontainer {
     flex: 0 0 400px;
+    margin: 0rem 0rem 0rem 1.1rem;
     height: 400px;
   }
 }
@@ -701,26 +717,38 @@ h3 {
 .about-me__textcontainer {
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 961px) {
   .about-me__textcontainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     text-align: left;
+    width: 75%;
   }
 }
 
 .about-me__textcontainer-heading {
   text-transform: uppercase;
   text-align: center;
-  padding: 60px 0px 40px 0px;
+  padding: 60px 0px 20px 0px;
   margin: 0px 0px 0px 0px;
 }
 
 @media only screen and (min-width: 961px) {
   .about-me__textcontainer-heading {
     text-align: left;
-    padding: 60px 0px 40px 40px;
+    padding: 60px 0px 20px 40px;
   }
+}
+
+.about-me__textcontainer-description {
+  margin: 0px 0px 0px 0px;
 }
 
 @media only screen and (min-width: 961px) {
@@ -746,14 +774,14 @@ h3 {
 .about-website__heading {
   text-align: center;
   text-transform: uppercase;
-  padding: 40px 0px 40px 0px;
+  padding: 40px 0px 20px 0px;
   margin: 0px 0px 0px 0px;
 }
 
 @media only screen and (min-width: 961px) {
   .about-website__heading {
     text-align: left;
-    padding: 40px 0px 40px 40px;
+    padding: 40px 0px 20px 3.5rem;
   }
 }
 
@@ -765,6 +793,7 @@ h3 {
 @media only screen and (min-width: 961px) {
   .about-website__description {
     text-align: left;
+    padding-left: 3.5rem;
   }
 }
 
@@ -790,7 +819,7 @@ h3 {
 
 @media only screen and (min-width: 961px) {
   .mainpicture-gallery__slider {
-    width: 55%;
+    width: 60%;
     height: auto;
   }
 }
@@ -818,7 +847,8 @@ h3 {
   position: relative;
   overflow: hidden;
   padding: 3px;
-  border: #666 solid 1px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .mainpicture-gallery__image-container {
@@ -879,6 +909,7 @@ h3 {
 
 .mainpicture-gallery__slider-picture {
   width: 100%;
+  height: auto;
 }
 
 .mainpicture-gallery__slider-next {
