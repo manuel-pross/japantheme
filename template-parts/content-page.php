@@ -10,8 +10,6 @@
 ?>
 <?php
 	$image = get_field('img');
-	//$about_me = get_field('about_me');
-	//var_dump($about_me);
 ?>
 
 <div class="about-me">
@@ -54,9 +52,48 @@
 	<div class="mainpicture-gallery__slider">
 		<img src="http://japanblog.local/wp-content/uploads/2019/09/arrow-left.png" alt="arrow for previous picture" class="mainpicture-gallery__slider-prev">
 		<div class="mainpicture-gallery__slider-inner">
-			<img src="http://japanblog.local/wp-content/uploads/2019/09/20190811_144152.jpg" alt="active picture" class="is-active">
-			<img src="http://japanblog.local/wp-content/uploads/2019/09/20190810_142320.jpg" alt="passive picture 1" class="is-passive">
-			<img src="http://japanblog.local/wp-content/uploads/2019/09/20190807_120158.jpg" alt="passive picture 2" class="is-passive">
+			<div class="mainpicture-gallery__image-container is-active">
+				<figure class="mainpicture-gallery__picture-caption">
+					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190811_144152.jpg" alt="active picture" class="mainpicture-gallery__slider-picture">
+					<figcaption class="mainpicture-gallery__picture-subline">Osaka - Castle</figcaption>
+				</figure>
+			</div>
+			<div class="mainpicture-gallery__image-container is-passive">
+				<figure class="mainpicture-gallery__picture-caption">
+					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190809_174328.jpg" alt="passive picture 1" class="mainpicture-gallery__slider-picture">
+					<figcaption class="mainpicture-gallery__picture-subline">Hirschpark - Nara</figcaption>
+				</figure>
+			</div>
+			<div class="mainpicture-gallery__image-container is-passive">
+				<figure class="mainpicture-gallery__picture-caption">
+					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190810_142320.jpg" alt="passive picture 2" class="mainpicture-gallery__slider-picture">
+					<figcaption class="mainpicture-gallery__picture-subline">Kinkaku-ji - Kyoto</figcaption>
+				</figure>
+			</div>
+			<div class="mainpicture-gallery__image-container is-passive">
+				<figure class="mainpicture-gallery__picture-caption">
+					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190807_120158.jpg" alt="passive picture 3" class="mainpicture-gallery__slider-picture">
+					<figcaption class="mainpicture-gallery__picture-subline">Hozu Fluss - Kyoto</figcaption>
+				</figure>
+			</div>
+			<div class="mainpicture-gallery__image-container is-passive">
+				<figure class="mainpicture-gallery__picture-caption">
+					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190807_103337.jpg" alt="passive picture 4" class="mainpicture-gallery__slider-picture">
+					<figcaption class="mainpicture-gallery__picture-subline">Arashiyama - Kyoto</figcaption>
+				</figure>
+			</div>
+			<div class="mainpicture-gallery__image-container is-passive">
+				<figure class="mainpicture-gallery__picture-caption">
+					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190810_113640.jpg" alt="passive picture 5" class="mainpicture-gallery__slider-picture">
+					<figcaption class="mainpicture-gallery__picture-subline">Fushimi Inari Taisha - Kyoto</figcaption>
+				</figure>
+			</div>
+			<div class="mainpicture-gallery__image-container is-passive">
+				<figure class="mainpicture-gallery__picture-caption">
+					<img src="http://japanblog.local/wp-content/uploads/2019/09/20190805_135402.jpg" alt="passive picture 6" class="mainpicture-gallery__slider-picture">
+					<figcaption class="mainpicture-gallery__picture-subline">Fujiyama</figcaption>
+				</figure>
+			</div>
 		</div>
 		<img src="http://japanblog.local/wp-content/uploads/2019/09/arrow-right.png" alt="arrow for next picture" class="mainpicture-gallery__slider-next">
 	</div>

@@ -772,6 +772,9 @@ h3 {
   width: 75%;
   margin: 50px auto 0px auto;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mainpicture-gallery__heading {
@@ -782,14 +785,22 @@ h3 {
 
 .mainpicture-gallery__slider {
   display: flex;
+  width: 100%;
+}
+
+@media only screen and (min-width: 961px) {
+  .mainpicture-gallery__slider {
+    width: 55%;
+    height: auto;
+  }
 }
 
 .mainpicture-gallery__slider-prev {
   float: left;
   margin-top: 110px;
   cursor: pointer;
-  height: 100%;
-  width: auto;
+  width: 56px;
+  height: 58px;
   position: relative;
   margin-right: -45px;
   z-index: 100;
@@ -797,7 +808,7 @@ h3 {
 
 @media only screen and (min-width: 961px) {
   .mainpicture-gallery__slider-prev {
-    margin-top: 300px;
+    margin-top: 190px;
   }
 }
 
@@ -810,9 +821,9 @@ h3 {
   border: #666 solid 1px;
 }
 
-.mainpicture-gallery__figcaption {
-  margin: 0px 0px 15px 0px;
-  background-color: blue;
+.mainpicture-gallery__image-container {
+  width: 100%;
+  position: relative;
 }
 
 .mainpicture-gallery .is-active {
@@ -823,11 +834,16 @@ h3 {
 }
 
 .mainpicture-gallery .is-active:hover {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.mainpicture-gallery .is-active:hover .mainpicture-gallery__picture-subline {
+  opacity: 1;
+  bottom: 13%;
 }
 
 .mainpicture-gallery .is-passive {
@@ -836,11 +852,40 @@ h3 {
   height: auto;
 }
 
+.mainpicture-gallery__picture-caption {
+  margin: 0;
+}
+
+.mainpicture-gallery__picture-subline {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%);
+  color: #FFFFFF;
+  background-color: #54000F;
+  padding: 3px 3px;
+  border-radius: 7px;
+  opacity: 0;
+  transition: opacity 2s;
+  transition: bottom 0.3s;
+  padding: 10px 10px 10px 10px;
+}
+
+@media only screen and (min-width: 961px) {
+  .mainpicture-gallery__picture-subline {
+    font-size: 1.5rem;
+  }
+}
+
+.mainpicture-gallery__slider-picture {
+  width: 100%;
+}
+
 .mainpicture-gallery__slider-next {
   margin-top: 110px;
   cursor: pointer;
-  height: 100%;
-  width: auto;
+  width: 56px;
+  height: 58px;
   position: relative;
   margin-left: -45px;
   z-index: 100;
@@ -848,7 +893,7 @@ h3 {
 
 @media only screen and (min-width: 961px) {
   .mainpicture-gallery__slider-next {
-    margin-top: 300px;
+    margin-top: 190px;
   }
 }
 

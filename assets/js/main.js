@@ -117,8 +117,8 @@ var pictureSlider = function ($) {
       VARS
   ******************************************************************/
   // your code here
-  var $firstChild = $('.mainpicture-gallery__slider-inner img:first-child');
-  var $lastChild = $('.mainpicture-gallery__slider-inner img:last-child');
+  var $firstChild = $('.mainpicture-gallery__slider-inner div:first-child');
+  var $lastChild = $('.mainpicture-gallery__slider-inner div:last-child');
   /******************************************************************
       EVENTS
   ******************************************************************/
@@ -133,7 +133,6 @@ var pictureSlider = function ($) {
 
   function moveToNextPicture() {
     if ($('.is-active').next().length != 0) {
-      console.log('move to next nextPicture');
       $('.is-active').removeClass('is-active').addClass('is-passive').next().removeClass('is-passive').addClass('is-active');
     } else {
       $firstChild.removeClass('is-passive').addClass('is-active');
@@ -143,7 +142,6 @@ var pictureSlider = function ($) {
 
   function moveToPreviousPicture() {
     if ($('.is-active').prev().length != 0) {
-      console.log('move to next previousPicture');
       $('.is-active').removeClass('is-active').addClass('is-passive').prev().removeClass('is-passive').addClass('is-active');
     } else {
       $lastChild.removeClass('is-passive').addClass('is-active');
