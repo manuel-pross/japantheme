@@ -1,7 +1,6 @@
 .about-me {
     display: flex;
     flex-direction: column;
-
     margin: 100px 0px 0px 0px;
     padding: 0px 40px 0px 40px;
 
@@ -48,6 +47,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0px 0px 0px 2rem;
 
         @include medium {
             flex-direction: row;
@@ -56,10 +56,6 @@
             text-align: left;
             width: 75%;
         }
-    }
-
-    &__textcontainer-inner {
-
     }
 
     &__textcontainer-heading {

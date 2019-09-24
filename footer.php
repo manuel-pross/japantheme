@@ -52,12 +52,18 @@
                 </div>
             </div>
             <div class="footer__container">
+                <h3 class="footer__heading">Weiterführende Links</h3>
+                <div class="footer__container">
+                    <a href="" class="footer__link">Impressum</a>
+                </div>
+            </div>
+            <!-- <div class="footer__container">
                 <ul class="footer__list">
                     <li class="footer__list-item">
-                        <a href="tel:01794302678" class="footer__link">Impressum</a>
+                        <a href="" class="footer__link">Impressum</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="footer__lower">
                 <?php if( $insta_link):?>

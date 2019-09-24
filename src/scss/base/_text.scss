@@ -28,14 +28,15 @@ h2 {
       font-size: 1.75rem;
   }
 }
+
 h3 {
    font-size: 1rem;
 
    @include medium{
-      font-size: 1.25rem
+      font-size: 1.1rem
   }
 
   @include large{
-      font-size: 1.5rem;
+      font-size: 1.3rem;
   }
 }
