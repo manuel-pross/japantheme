@@ -613,7 +613,7 @@ h3 {
 
 .image-header__navpicture-description-container {
   position: absolute;
-  top: 20%;
+  bottom: 10%;
   left: 50%;
   text-align: center;
   padding: 10px 5px 10px 5px;
@@ -1185,6 +1185,114 @@ h3 {
 
 .burger-icon__passive {
   display: none;
+}
+
+.trip-thumbnail__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (min-width: 961px) {
+  .trip-thumbnail__container {
+    flex-direction: row;
+    align-items: unset;
+  }
+}
+
+.trip-thumbnail__heading {
+  padding: 1.1rem 0rem 1.1rem 0rem;
+  margin: 10rem 0rem 0rem 0rem;
+}
+
+@media only screen and (min-width: 961px) {
+  .trip-thumbnail__heading {
+    order: 2;
+  }
+}
+
+.trip-thumbnail__image {
+  width: 50%;
+  height: auto;
+}
+
+@media only screen and (min-width: 961px) {
+  .trip-thumbnail__image {
+    order: 1;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .trip-thumbnail__image {
+    margin-left: 0.8%;
+  }
+}
+
+.trip-thumbnail__description {
+  text-align: center;
+  padding: 0rem 0.1rem 0rem 0.1rem;
+}
+
+@media only screen and (min-width: 961px) {
+  .trip-thumbnail__description {
+    order: 3;
+  }
+}
+
+.trip-heading-imgs-descr {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.trip-heading-imgs-descr__heading {
+  text-align: center;
+  margin: 10rem 0rem 0rem 0rem;
+  padding: 1.1rem 0rem 1.1rem 0rem;
+}
+
+.trip-heading-imgs-descr__images-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 0rem 0rem 0rem;
+  margin: 0rem 0rem 0rem 0rem;
+}
+
+@media only screen and (min-width: 1361px) {
+  .trip-heading-imgs-descr__images-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.trip-heading-imgs-descr__image-container {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.trip-heading-imgs-descr__image {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1361px) {
+  .trip-heading-imgs-descr__image {
+    width: 95%;
+  }
+}
+
+.trip-heading-imgs-descr__description {
+  text-align: center;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 2rem 0rem 2rem 0rem;
+  background-color: #7D1124;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

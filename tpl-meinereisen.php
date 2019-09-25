@@ -13,7 +13,6 @@ get_header(); ?>
    endif;
 ?>
 
-<div class="trip">
 <?php
    // check if the flexible content field has rows of data
       if( have_rows('trip_flexible') ):
@@ -22,30 +21,35 @@ get_header(); ?>
 
             if( get_row_layout() == 'layout_flexible' ):
 ?>
-               <div class="trip__heading">
-                  <?php the_sub_field('trip_heading'); ?>
-               </div>
-               <div class="trip__image">
-                  <?php
-                     $tripImg = get_sub_field('trip_thumb');
-                  ?>
-                  <img src="<?php echo $tripImg['url']; ?>" alt="">
-               </div>
-               <div class="trip__description">
-                  <?php the_sub_field('trip_description'); ?>
+               <div class="trip-thumbnail">
+                  <div class="trip-thumbnail__container">
+                     <h2 class="trip-thumbnail__heading"><?php the_sub_field('trip_heading'); ?></h2>
+                     <?php
+                        $tripImg = get_sub_field('trip_thumb');
+                     ?>
+                     <img src="<?php echo $tripImg['url']; ?>" alt="<?php echo $tripImg['alt']; ?>" class="trip-thumbnail__image">
+                     <p class="trip-thumbnail__description"><?php the_sub_field('trip_description'); ?></p>
+                  </div>
                </div>
 <?php
             endif;
-            if( get_row_layout() == 'layout_img_and_text' ):
+            if( get_row_layout() == 'layout_imgs_and_text' ):
 ?>
-               <div class="trip__image">
+               <div class="trip-heading-imgs-descr">
+                  <h2 class="trip-heading-imgs-descr__heading"><?php the_sub_field('trip_imgs_heading'); ?></h2>
+                  <?php $tripImgs = get_sub_field('trip_imgs_gallery'); ?>
                   <?php
-                     $tripImg = get_sub_field('trip_img');
-                  ?>
-                  <img src="<?php echo $tripImg['url']; ?>" alt="">
-               </div>
-               <div class="trip__description">
-                  <?php the_sub_field('trip_img_descr'); ?>
+                     $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                     if( $tripImgs ): ?>
+                        <ul class="trip-heading-imgs-descr__images-container">
+                           <?php foreach( $tripImgs as $image ): ?>
+                                 <li class="trip-heading-imgs-descr__image-container">
+                                    <?php echo wp_get_attachment_image( $image['ID'], $size, false,  array( "class" => "trip-heading-imgs-descr__image" ) ); ?>
+                                 </li>
+                           <?php endforeach; ?>
+                        </ul>
+                     <?php endif; ?>
+                     <p class="trip-heading-imgs-descr__description"><?php the_sub_field('trip_imgs_description'); ?></p>
                </div>
 <?php
             endif;
@@ -54,6 +58,4 @@ get_header(); ?>
       // no layouts found
       endif;
 ?>
-</div>
-
 <?php get_footer();?>
