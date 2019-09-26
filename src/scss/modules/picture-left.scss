@@ -1,0 +1,95 @@
+.picture-left {
+   margin-top: 8rem;
+   padding: 0 2rem;
+   display: flex;
+   flex-direction: column;
+
+   @include medium {
+      flex-direction: row;
+  }
+
+  &__figure {
+   position: relative;
+   width: 100%;
+   margin: 0 0;
+
+      @include medium {
+         order: 1;
+
+         &:hover {
+            .picture-left__caption-container {
+               color: $white;
+               background: linear-gradient(to left, transparent 0%, $lighterSakura 90%);
+               left: 0%;
+               right: 0%;
+            }
+         }
+      }
+   }
+
+  &__image {
+   display: block;
+   width: 100%;
+   margin: 0 auto;
+
+      @include medium {
+         order: 1;
+      }
+   }
+
+   &__caption-container {
+      position: absolute;
+      text-align: right;
+      color: $white;
+      background: $lighterSakura;
+      bottom: 0%;
+      right: 0%;
+      left: 0%;
+      padding: 0.25rem 0.5rem;
+
+      @include medium {
+         color: transparent;
+         background: transparent;
+         right: -100%;
+         left: 100%;
+         top: 90%;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         transition: left 0.8s;
+      }
+   }
+
+   &__container {
+      width: 100%;
+
+      @include medium {
+         padding-left: 2rem;
+         order: 2;
+     }
+   }
+
+   &__heading {
+      text-align: center;
+      border-top: black solid 2px;
+      border-bottom: black solid 2px;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+
+      @include medium{
+         font-size: 1.5rem
+     }
+
+     @include large{
+         font-size: 1.75rem;
+     }
+   }
+
+   &__description {
+      text-align: center;
+      padding: 2rem 1rem 2rem 1rem;
+      margin-bottom: 1rem;
+      background-color: $darkerSakura;
+      color: $white;
+   }
+}

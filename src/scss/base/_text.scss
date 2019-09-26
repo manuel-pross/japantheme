@@ -3,10 +3,23 @@ h2,
 h3 {
    font-weight: normal;
    font-family: $font-main-3;
+   margin: 0rem 0rem 0rem 0rem;
 }
 
 h1 {
-   font-size: 1.5rem;
+   font-size: 2rem;
+
+   @include medium{
+      font-size: 2.25rem
+  }
+
+  @include large{
+      font-size: 2.5rem;
+  }
+}
+
+h2 {
+   font-size: 1.75rem;
 
    @include medium{
       font-size: 2rem
@@ -17,26 +30,19 @@ h1 {
   }
 }
 
-h2 {
-   font-size: 1.25rem;
+h3 {
+   font-size: 1.5rem;
+   padding: 1.1rem 0rem;
 
    @include medium{
-      font-size: 1.5rem
+      font-size: 1.75rem
   }
 
   @include large{
-      font-size: 1.75rem;
+      font-size: 2rem;
   }
 }
 
-h3 {
-   font-size: 1rem;
-
-   @include medium{
-      font-size: 1.1rem
-  }
-
-  @include large{
-      font-size: 1.3rem;
-  }
+p {
+    margin: 0rem 0rem 0rem 0rem;
 }

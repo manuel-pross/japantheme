@@ -1,23 +1,25 @@
 .trip-heading-imgs-descr {
    display: flex;
    justify-content: center;
-   display: flex;
    flex-direction: column;
+   margin-top: 8rem;
+   padding: 0 2rem;
 
    &__heading {
       text-align: center;
-      margin: 10rem 0rem 0rem 0rem;
       padding: 1.1rem 0rem 1.1rem 0rem;
+      margin-bottom: 1rem;
+      border-bottom: black solid 2px;
    }
 
    &__images-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0rem 0rem 0rem 0rem;
-      margin: 0rem 0rem 0rem 0rem;
+      padding: 0;
+      margin: 0;
 
-      @include large {
+      @include medium {
          flex-direction: row;
          align-items: center;
      }
@@ -25,27 +27,39 @@
 
    &__image-container {
       list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin-bottom: 1rem;
    }
 
    &__image {
-      width: 75%;
+      width: 100%;
       height: auto;
       margin: 0 auto;
 
-      @include large {
+      @include medium {
          width: 95%;
-     }
+      }
    }
 
    &__description {
       text-align: center;
       margin: 0rem 0rem 0rem 0rem;
-      padding: 2rem 0rem 2rem 0rem;
+      padding: 2rem 1rem 2rem 1rem;
       background-color: $darkerSakura;
       color: $white;
    }
+}
+
+.number1 {
+   display: block;
+   margin-left: 0;
+}
+
+.number2 {
+   display: block;
+   margin: 0 auto;
+}
+
+.number3 {
+   display: block;
+   margin-right: 0;
 }

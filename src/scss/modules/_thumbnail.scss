@@ -1,0 +1,51 @@
+.thumbnail {
+   margin-top: 5rem;
+   padding: 0 2rem;
+
+   @include medium {
+      margin-top: 10rem;
+   }
+
+
+   &__container {
+      position: relative;
+      margin: 0;
+
+      &:after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background: linear-gradient(to bottom, rgba($black, 0.5) 0%, rgba($black, 0.4) 30%, transparent 50%);
+      }
+   }
+
+   &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+   }
+
+   &__caption {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 5;
+   }
+
+   &__heading {
+      color: $white;
+   }
+
+   &__description {
+      text-align: center;
+      margin: 0rem 0rem 0rem 0rem;
+      padding: 2rem 1rem 2rem 1rem;
+      background-color: $darkerSakura;
+      color: $white;
+      margin-top: 1rem;
+   }
+}

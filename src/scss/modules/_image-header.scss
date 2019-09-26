@@ -1,11 +1,6 @@
-.image-header { //EVENTUELL ALS BACKGROUND-IMAGE
+.image-header {
     overflow: hidden;
     position: relative;
-    height: 40vh;
-
-    @include medium {
-        height: 90vh;
-    }
 
     &__navpicture{
         width: 100%;
@@ -15,7 +10,7 @@
 
     &__navpicture-description-container {
         position: absolute;
-        bottom: 10%;
+        top: 60%;
         left: 50%;
         text-align: center;
         padding: 10px 5px 10px 5px;

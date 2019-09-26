@@ -39,10 +39,6 @@
         padding: 40px 0px 40px 0px;
         margin: 0px 0px 0px 0px;
 
-        @include medium {
-            font-size: 1.5rem;
-        }
-
         @include large {
             text-align: left;
         }
@@ -128,25 +124,15 @@
         }
     }
 
-    &__list {
-        margin: 0px 0px 0px 0px;
-        text-align: center;
-        list-style-type: none;
-    }
-
-    &__list-item {
-        font-size: 0.9rem;
-        padding: 20px 40px 20px 0px;
-
-        @include medium {
-            font-size: 1rem;
-        }
-    }
-
     &__link {
         text-decoration: none;
         color: $white;
         transition: color 0.5s;
+        margin-bottom: 1rem;
+
+        @include medium {
+            margin-bottom: 0;
+        }
 
         &:hover {
             color: $lighterSakura;
