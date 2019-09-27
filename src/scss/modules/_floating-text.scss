@@ -1,0 +1,88 @@
+.floating-text {
+   padding: 0 1rem;
+   margin-top: 5rem;
+
+   @include medium {
+      margin-top: 12rem;
+   }
+
+   &__heading {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-bottom: 2rem;
+      margin-left: -2rem;
+      margin-right: -2rem;
+      background-color: $darkerSakura;
+      color: $white;
+
+   }
+
+   &__wrapper {
+
+      @include medium {
+         display: flex;
+      }
+   }
+
+   &__image-container {
+      position: relative;
+      width: 100%;
+
+      @include medium {
+         flex: 0 0 400px;
+         width: 400px;
+         height: 400px;
+         overflow: hidden;
+         border-radius: 100%;
+         width: auto;
+     }
+
+      @include large {
+         flex: 0 0 500px;
+         height: 500px;
+         width: 500px;
+      }
+   }
+
+   &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      @include medium {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         height: 100%;
+         width: auto;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__description {
+      text-align: center;
+      margin: 1rem 0;
+      padding: 1rem 0.5rem;
+      background-color: $lighterSakura;
+      color: $white;
+
+      @include medium {
+         margin: 0rem 1rem;
+         padding: 1rem 1rem;
+         max-height: 368px;
+      }
+
+      @include large {
+         padding: 1rem 1rem;
+         max-height: 468px;
+      }
+   }
+
+   &__description-under {
+      margin: 2rem 0;
+      padding: 1rem 0.5rem;
+      background-color: $lighterSakura;
+      color: $white;
+
+   }
+}

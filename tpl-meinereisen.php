@@ -23,9 +23,9 @@ get_header(); ?>
 ?>
                <div class="thumbnail">
                   <figure class="thumbnail__container">
-                     <?php
+<?php
                         $tripImg = get_sub_field('img');
-                     ?>
+?>
                      <img src="<?php echo $tripImg['url']; ?>" alt="<?php echo $tripImg['alt']; ?>" class="thumbnail__image">
                      <figcaption class="thumbnail__caption">
                         <h2 class="thumbnail__heading"><?php the_sub_field('heading'); ?></h2>
@@ -46,7 +46,7 @@ get_header(); ?>
                      if( $tripImgs ): ?>
                         <ul class="trip-heading-imgs-descr__images-container">
                            <?php foreach( $tripImgs as $image ): ?>
-                                 <li class="trip-heading-imgs-descr__image-container">
+                                 <li class="<?php echo("trip-heading-imgs-descr__image-container linumber". $counter)?>">
 <?php
                                     echo wp_get_attachment_image( $image['ID'], $size, false,  array( "class" => "trip-heading-imgs-descr__image number" . $counter) );
                                     $counter++;

@@ -46,6 +46,8 @@
       right: 0%;
       left: 0%;
       padding: 0.25rem 0.5rem;
+      display: flex;
+      justify-content: center;
 
       @include medium {
          color: transparent;
@@ -53,7 +55,6 @@
          right: -100%;
          left: 100%;
          top: 90%;
-         display: flex;
          justify-content: flex-start;
          align-items: center;
          transition: left 0.8s;

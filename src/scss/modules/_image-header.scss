@@ -5,6 +5,7 @@
     &__navpicture{
         width: 100%;
         height: auto;
+        display: block;
         margin-top: 0px;
     }
 
@@ -13,7 +14,7 @@
         top: 60%;
         left: 50%;
         text-align: center;
-        padding: 10px 5px 10px 5px;
+        padding: 0.5rem 0.25rem;
         transform: translate(-50%);
         background-color: $lighterSakura;
         border-radius: 10px;
@@ -36,7 +37,6 @@
     }
 
     &__entry-title {
-        margin: 0px 0px 0px 0px;
         color: $white;
         text-transform: uppercase;
     }
