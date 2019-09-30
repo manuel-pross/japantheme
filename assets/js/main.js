@@ -75,33 +75,34 @@ var mainNavigation = function ($) {
       VARS
   ******************************************************************/
   // your code here
-
+  var $firstListItem = $('#menu-item-17');
+  var $secondListItem = $('#menu-item-21');
+  var $thirdListItem = $('#menu-item-22');
+  var $fourthListItem = $('#menu-item-18');
+  var $fifthListItem = $('#menu-item-20');
+  console.log($firstListItem.get());
   /******************************************************************
       EVENTS
   ******************************************************************/
-  //appendIconToNav();
-  //appendSmallIconsToListitems();
 
+  $firstListItem.on('click', changeClass);
+  $secondListItem.on('click', changeClass);
+  $thirdListItem.on('click', changeClass);
+  $fourthListItem.on('click', changeClass);
+  $fifthListItem.on('click', changeClass);
   /******************************************************************
       FUNCTIONS
   ******************************************************************/
   // your code here
-  function appendIconToNav() {
-    $('#primary-menu').prepend('<li class="icon"></li>');
-    var $icon = $('.icon');
-    $icon.append('<img src="http://japanblog.local/wp-content/uploads/2019/09/cherry-blossom-1.png" class="blossom-icon">');
-    $icon.css({
-      "text-align": "center"
-    });
-    $('.blossom-icon').css({
-      'padding': '10px 0px 0px 5px'
-    });
+
+  function changeClass() {
+    $firstListItem.removeClass('is-navitem-active');
+    $secondListItem.removeClass('is-navitem-active');
+    $thirdListItem.removeClass('is-navitem-active');
+    $fourthListItem.removeClass('is-navitem-active');
+    $fifthListItem.removeClass('is-navitem-active');
+    $(this).addClass('is-navitem-active');
   }
-
-  function appendSmallIconsToListitems() {
-    $('a').append('<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/cherry-blossom.png">');
-  } //$('.blossom-icon').css({"margin-top" : "5px"});
-
   /******************************************************************
       PUBLIC_FUNCTIONS
   ******************************************************************/
@@ -120,7 +121,6 @@ var pictureSlider = function ($) {
   var $firstChild = $('.mainpicture-gallery__slider-inner li:first-child');
   $firstChild.removeClass('is-passive').addClass('is-active');
   var $lastChild = $('.mainpicture-gallery__slider-inner li:last-child');
-  console.log($firstChild);
   /******************************************************************
       EVENTS
   ******************************************************************/

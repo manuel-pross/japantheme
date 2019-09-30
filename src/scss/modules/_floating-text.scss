@@ -1,20 +1,19 @@
 .floating-text {
    padding: 0 1rem;
-   margin-top: 5rem;
+   margin-top: 8rem;
 
    @include medium {
-      margin-top: 12rem;
+      margin-top: 16rem;
    }
 
    &__heading {
       text-align: center;
       padding: 1.5rem 1rem;
       margin-bottom: 2rem;
-      margin-left: -2rem;
-      margin-right: -2rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
       background-color: $darkerSakura;
       color: $white;
-
    }
 
    &__wrapper {
@@ -29,9 +28,9 @@
       width: 100%;
 
       @include medium {
-         flex: 0 0 400px;
-         width: 400px;
-         height: 400px;
+         flex: 0 0 300px;
+         width: 300px;
+         height: 300px;
          overflow: hidden;
          border-radius: 100%;
          width: auto;
@@ -59,6 +58,24 @@
       }
    }
 
+   &__middle-wrapper {
+
+   }
+
+   &__middle-heading {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin: 1rem 0;
+      background-color: $darkerSakura;
+      color: $white;
+      font-size: 1.5rem;
+
+      @include medium {
+         margin: 1rem;
+         margin-top: 0;
+      }
+   }
+
    &__description {
       text-align: center;
       margin: 1rem 0;
@@ -69,17 +86,23 @@
       @include medium {
          margin: 0rem 1rem;
          padding: 1rem 1rem;
-         max-height: 368px;
       }
 
       @include large {
          padding: 1rem 1rem;
-         max-height: 468px;
       }
    }
 
-   &__description-under {
-      margin: 2rem 0;
+   &__under-heading {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin: 1rem 0;
+      background-color: $darkerSakura;
+      color: $white;
+      font-size: 1.5rem;
+   }
+
+   &__under-description {
       padding: 1rem 0.5rem;
       background-color: $lighterSakura;
       color: $white;

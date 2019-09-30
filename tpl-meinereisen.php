@@ -35,6 +35,14 @@ get_header(); ?>
                   </div>
 <?php
             endif;
+            if( get_row_layout() == 'layout_heading_and_text' ):
+?>
+               <div class="heading-text">
+                  <h2 class="heading-text__heading"><?php the_sub_field('heading'); ?></h2>
+                  <p class="heading-text__description"><?php the_sub_field('descr'); ?></p>
+               </div>
+<?php
+            endif;
             if( get_row_layout() == 'layout_imgs_and_text' ):
 ?>
                <div class="trip-heading-imgs-descr">
@@ -91,8 +99,31 @@ get_header(); ?>
                         </figcaption>
                      </figure>
                   </div>
-<?php          endif;
-
+<?php
+               endif;
+            endif;
+            if( get_row_layout() == 'layout_img_text_only' ):
+               if(get_sub_field('toggle')):
+                   $img = get_sub_field('img');
+?>
+                     <div class="picture-left-only">
+                        <a href="<?php echo get_sub_field('link'); ?>" class="picture-left-only__link">
+                           <img src="<?php echo $img['url']; ?>" alt="<?php echo $tripimg['alt']; ?>" class="picture-left-only__image">
+                        </a>
+                        <p class="picture-left-only__description"><?php the_sub_field('descr'); ?></p>
+                     </div>
+<?php
+               else:
+                  $img = get_sub_field('img');
+?>
+                  <div class="picture-right-only">
+                     <a href="<?php echo get_sub_field('link') ?>" class="picture-right-only__link">
+                        <img src="<?php echo $img['url']; ?>" alt="<?php echo $tripimg['alt']; ?>" class="picture-right-only__image">
+                     </a>
+                     <p class="picture-right-only__description"><?php the_sub_field('descr'); ?></p>
+                  </div>
+<?php
+               endif;
             endif;
          endwhile;
       else :

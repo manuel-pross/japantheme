@@ -12,6 +12,7 @@
    position: relative;
    width: 100%;
    margin: 0 0;
+   overflow: hidden;
 
       @include medium {
          order: 1;

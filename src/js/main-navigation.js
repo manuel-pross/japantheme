@@ -4,29 +4,35 @@ const mainNavigation = (function($) {
         VARS
     ******************************************************************/
     // your code here
+    const $firstListItem = $('#menu-item-17');
+    const $secondListItem = $('#menu-item-21');
+    const $thirdListItem = $('#menu-item-22');
+    const $fourthListItem = $('#menu-item-18');
+    const $fifthListItem = $('#menu-item-20');
+
+    console.log($firstListItem.get());
     /******************************************************************
         EVENTS
     ******************************************************************/
-    //appendIconToNav();
-    //appendSmallIconsToListitems();
+   $firstListItem.on('click',changeClass);
+   $secondListItem.on('click',changeClass);
+   $thirdListItem.on('click',changeClass);
+   $fourthListItem.on('click',changeClass);
+   $fifthListItem.on('click',changeClass);
 
     /******************************************************************
         FUNCTIONS
     ******************************************************************/
     // your code here
-    function appendIconToNav() {
-        $('#primary-menu').prepend('<li class="icon"></li>');
-        const $icon = $('.icon');
-        $icon.append('<img src="http://japanblog.local/wp-content/uploads/2019/09/cherry-blossom-1.png" class="blossom-icon">');
-        $icon.css({"text-align" : "center"});
-        $('.blossom-icon').css({'padding' : '10px 0px 0px 5px'});
-    }
+    function changeClass () {
+        $firstListItem.removeClass('is-navitem-active');
+        $secondListItem.removeClass('is-navitem-active');
+        $thirdListItem.removeClass('is-navitem-active');
+        $fourthListItem.removeClass('is-navitem-active');
+        $fifthListItem.removeClass('is-navitem-active');
 
-    function appendSmallIconsToListitems () {
-        $('a').append('<img src="http://localhost/japanBlog/wp-content/uploads/2019/09/cherry-blossom.png">');
+        $(this).addClass('is-navitem-active');
     }
-
-    //$('.blossom-icon').css({"margin-top" : "5px"});
 
 
 

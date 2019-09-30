@@ -8,7 +8,6 @@ const pictureSlider = (function($) {
     $firstChild.removeClass('is-passive').addClass('is-active');
     let $lastChild = $('.mainpicture-gallery__slider-inner li:last-child');
 
-    console.log($firstChild);
     /******************************************************************
         EVENTS
     ******************************************************************/

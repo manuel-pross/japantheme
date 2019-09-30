@@ -536,6 +536,8 @@ h3 {
 
 p {
   margin: 0rem 0rem 0rem 0rem;
+  line-height: 1.75rem;
+  font-size: 1.1rem;
 }
 
 a {
@@ -560,6 +562,7 @@ a {
     margin: 0;
     list-style: none;
     padding-left: 40px;
+    padding-right: 20px;
   }
 }
 
@@ -571,7 +574,8 @@ a {
   .main-navigation li {
     display: flex;
     align-items: stretch;
-    margin-right: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
     font-size: 1.2rem;
   }
 }
@@ -603,6 +607,11 @@ a {
   background-color: #C25367;
 }
 
+.current-menu-item {
+  border-bottom: solid 3px #FFFFFF;
+  background-color: #C25367;
+}
+
 .image-header {
   overflow: hidden;
   position: relative;
@@ -617,7 +626,7 @@ a {
 
 .image-header__navpicture-description-container {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   text-align: center;
   padding: 0.5rem 0.25rem;
@@ -647,8 +656,21 @@ a {
 }
 
 .image-header__entry-title {
+  font-size: 1.25rem;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 961px) {
+  .image-header__entry-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .image-header__entry-title {
+    font-size: 2.5rem;
+  }
 }
 
 .image-header__description {
@@ -1318,6 +1340,7 @@ a {
   position: relative;
   width: 100%;
   margin: 0 0;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 961px) {
@@ -1417,6 +1440,7 @@ a {
   position: relative;
   width: 100%;
   margin: 0 0;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 961px) {
@@ -1510,12 +1534,12 @@ a {
 
 .floating-text {
   padding: 0 1rem;
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 
 @media only screen and (min-width: 961px) {
   .floating-text {
-    margin-top: 12rem;
+    margin-top: 16rem;
   }
 }
 
@@ -1523,8 +1547,8 @@ a {
   text-align: center;
   padding: 1.5rem 1rem;
   margin-bottom: 2rem;
-  margin-left: -2rem;
-  margin-right: -2rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
   background-color: #7D1124;
   color: #FFFFFF;
 }
@@ -1542,9 +1566,9 @@ a {
 
 @media only screen and (min-width: 961px) {
   .floating-text__image-container {
-    flex: 0 0 400px;
-    width: 400px;
-    height: 400px;
+    flex: 0 0 300px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     border-radius: 100%;
     width: auto;
@@ -1576,6 +1600,22 @@ a {
   }
 }
 
+.floating-text__middle-heading {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin: 1rem 0;
+  background-color: #7D1124;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 961px) {
+  .floating-text__middle-heading {
+    margin: 1rem;
+    margin-top: 0;
+  }
+}
+
 .floating-text__description {
   text-align: center;
   margin: 1rem 0;
@@ -1588,22 +1628,182 @@ a {
   .floating-text__description {
     margin: 0rem 1rem;
     padding: 1rem 1rem;
-    max-height: 368px;
   }
 }
 
 @media only screen and (min-width: 1361px) {
   .floating-text__description {
     padding: 1rem 1rem;
-    max-height: 468px;
   }
 }
 
-.floating-text__description-under {
-  margin: 2rem 0;
+.floating-text__under-heading {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin: 1rem 0;
+  background-color: #7D1124;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+.floating-text__under-description {
   padding: 1rem 0.5rem;
   background-color: #C25367;
   color: #FFFFFF;
+}
+
+.picture-right-only {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 0 2rem;
+}
+
+@media only screen and (min-width: 961px) {
+  .picture-right-only {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.picture-right-only__description {
+  text-align: center;
+  border-top: #000 solid 2px;
+  border-bottom: #000 solid 2px;
+  padding: 2rem 1rem 2rem 1rem;
+  background-color: #7D1124;
+  color: #FFFFFF;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 961px) {
+  .picture-right-only__description {
+    margin-left: 2rem;
+    margin-top: 0;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .picture-right-only__description {
+    width: 80%;
+  }
+}
+
+.picture-right-only__link {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (min-width: 961px) {
+  .picture-right-only__link {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .picture-right-only__link {
+    width: 20%;
+  }
+}
+
+.picture-right-only__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.picture-left-only {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 0 2rem;
+}
+
+@media only screen and (min-width: 961px) {
+  .picture-left-only {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.picture-left-only__description {
+  text-align: center;
+  border-top: #000 solid 2px;
+  border-bottom: #000 solid 2px;
+  padding: 2rem 1rem 2rem 1rem;
+  background-color: #7D1124;
+  color: #FFFFFF;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 961px) {
+  .picture-left-only__description {
+    margin-right: 2rem;
+    margin-top: 0;
+    order: 1;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .picture-left-only__description {
+    width: 80%;
+  }
+}
+
+.picture-left-only__link {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (min-width: 961px) {
+  .picture-left-only__link {
+    order: 2;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .picture-left-only__link {
+    width: 20%;
+  }
+}
+
+.picture-left-only__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.heading-text {
+  padding: 0 1rem;
+  margin-top: 8rem;
+}
+
+.heading-text__heading {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  background-color: #7D1124;
+  color: #FFFFFF;
+}
+
+.heading-text__description {
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 961px) {
+  .heading-text__description {
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=maps/style.css.map */

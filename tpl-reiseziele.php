@@ -29,12 +29,16 @@ Template Name: Reiseziele
                         <div class="floating-text__image-container">
                            <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="floating-text__image">
                         </div>
-                        <p class="floating-text__description"><?php the_sub_field('description1'); ?></p>
+                        <div class=floating-text__middle-wrapper>
+                           <h3 class="floating-text__middle-heading"><?php the_sub_field('heading2');?></h3>
+                           <p class="floating-text__description"><?php the_sub_field('description1'); ?></p>
+                        </div>
                         <div class="floating-text__image-container">
                            <img src="<?php echo $img2['url']; ?>" alt="<?php echo $img2['alt']; ?>" class="floating-text__image">
                         </div>
                   </div>
-                  <p class="floating-text__description-under"><?php the_sub_field('description3'); ?></p>
+                  <h3 class="floating-text__under-heading"><?php the_sub_field('heading3');?></h3>
+                  <p class="floating-text__under-description"><?php the_sub_field('description2'); ?></p>
                </div>
 <?php
          endif;

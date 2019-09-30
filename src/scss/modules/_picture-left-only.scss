@@ -1,0 +1,54 @@
+.picture-left-only {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 5rem;
+   padding: 0 2rem;
+
+   @include medium {
+      flex-direction: row;
+      align-items: flex-start;
+  }
+
+   &__description {
+      text-align: center;
+      border-top: $black solid 2px;
+      border-bottom: $black solid 2px;
+      padding: 2rem 1rem 2rem 1rem;
+      background-color: $darkerSakura;
+      color: $white;
+      margin-top: 1rem;
+
+      @include medium {
+         margin-right: 2rem;
+         margin-top: 0;
+         order: 1;
+         width: 50%;
+      }
+
+      @include large {
+         width: 80%;
+      }
+   }
+
+   &__link {
+      width: 100%;
+      height: auto;
+      display: block;
+
+      @include medium {
+         order: 2;
+         width: 50%;
+      }
+
+      @include large {
+         width: 20%;
+      }
+   }
+
+   &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+   }
+}

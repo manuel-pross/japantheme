@@ -17,6 +17,7 @@
 
             list-style: none;
             padding-left: 40px;
+            padding-right: 20px;
         }
 
         &.is-active {
@@ -29,7 +30,8 @@
         @include medium {
             display: flex;
             align-items: stretch;
-            margin-right: 40px;
+            margin-right: 20px;
+            margin-left: 20px;
             font-size: 1.2rem;
         }
 
@@ -37,7 +39,6 @@
             align-items: center;
 
             @include medium {
-
                 align-items: center;
             }
         }
@@ -59,4 +60,9 @@
             background-color: $lighterSakura;
         }
     }
+}
+
+.current-menu-item {
+    border-bottom: solid 3px $white;
+    background-color: $lighterSakura;
 }

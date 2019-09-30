@@ -11,7 +11,7 @@
 
     &__navpicture-description-container {
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
         text-align: center;
         padding: 0.5rem 0.25rem;
@@ -37,8 +37,17 @@
     }
 
     &__entry-title {
+        font-size: 1.25rem;
         color: $white;
         text-transform: uppercase;
+
+        @include medium{
+            font-size: 2.25rem;
+        }
+
+        @include large{
+            font-size: 2.5rem
+        }
     }
 
     &__description {
