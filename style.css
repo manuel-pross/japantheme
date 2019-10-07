@@ -1328,6 +1328,7 @@ a {
 .picture-right {
   margin-top: 8rem;
   padding: 0 2rem;
+  align-items: flex-start;
 }
 
 @media only screen and (min-width: 961px) {
@@ -1339,7 +1340,7 @@ a {
 .picture-right__figure {
   position: relative;
   width: 100%;
-  margin: 0 0;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -1355,7 +1356,9 @@ a {
 .picture-right__image {
   display: block;
   width: 100%;
+  height: auto;
   margin: 0 auto;
+  vertical-align: top;
 }
 
 .picture-right__caption-container {
@@ -1423,11 +1426,18 @@ a {
   color: #FFFFFF;
 }
 
+@media only screen and (min-width: 961px) {
+  .picture-right__description {
+    margin-bottom: 0;
+  }
+}
+
 .picture-left {
   margin-top: 8rem;
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 @media only screen and (min-width: 961px) {
@@ -1530,6 +1540,12 @@ a {
   margin-bottom: 1rem;
   background-color: #7D1124;
   color: #FFFFFF;
+}
+
+@media only screen and (min-width: 961px) {
+  .picture-left__description {
+    margin-bottom: 0;
+  }
 }
 
 .floating-text {
